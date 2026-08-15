@@ -1,0 +1,27 @@
+[project]
+name = "biocrypt"
+version = "0.1.0"
+description = "A versioned text-to-DNA (A/C/G/T) encoding/storage codec, API, and web interface."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "brotli>=1.2.0",
+    "fastapi>=0.141.1",
+    "uvicorn[standard]>=0.52.3",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/biocrypt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

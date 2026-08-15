@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>biocrypt — text ⇄ DNA codec</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="viz-root">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">🧬</span>
+        <div>
+          <h1>biocrypt</h1>
+          <p class="tagline">Text ⇄ DNA encoding &amp; storage — reversible, not encrypted.</p>
+        </div>
+      </div>
+      <div class="mode-picker">
+        <label for="mode-select">Mode</label>
+        <select id="mode-select">
+          <option value="digital" selected>Digital (compressed 2-bit)</option>
+          <option value="synthesis" disabled>Synthesis-safe (coming soon)</option>
+        </select>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="encode" role="tab" aria-selected="true">Encode</button>
+      <button class="tab-btn" data-tab="decode" role="tab" aria-selected="false">Decode</button>
+    </nav>
+
+    <main>
+      <!-- ENCODE -->
+      <section id="panel-encode" class="panel active" role="tabpanel">
+        <div class="grid two-col">
+          <div class="card">
+            <label class="field-label" for="encode-input">Text</label>
+            <textarea id="encode-input" placeholder="Type or paste text to encode as DNA…" rows="10"></textarea>
+            <div class="card-footer">
+              <span class="hint" id="encode-char-count">0 characters</span>
+              <button id="encode-btn" class="btn primary">Encode → DNA</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-row">
+              <label class="field-label" for="encode-output">DNA sequence</label>
+              <button id="copy-dna-btn" class="btn ghost small" disabled>Copy</button>
+            </div>
+            <div id="encode-output" class="dna-output" aria-label="Encoded DNA sequence">
+              <span class="placeholder">DNA output will appear here.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="encode-stats" class="stat-row" hidden></div>
+        <p id="encode-error" class="error-banner" hidden></p>
+      </section>
+
+      <!-- DECODE -->
+      <section id="panel-decode" class="panel" role="tabpanel" hidden>
+        <div class="grid two-col">
+          <div class="card">
+            <label class="field-label" for="decode-input">DNA sequence</label>
+            <textarea id="decode-input" placeholder="Paste a DNA sequence (A/C/G/T) to decode…" rows="10"></textarea>
+            <div class="card-footer">
+              <span class="hint" id="decode-char-count">0 bases</span>
+              <button id="decode-btn" class="btn primary">Decode → Text</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header-row">
+              <label class="field-label" for="decode-output">Recovered text</label>
+              <span id="integrity-badge" class="badge" hidden></span>
+            </div>
+            <div id="decode-output" class="text-output">
+              <span class="placeholder">Decoded text will appear here.</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="decode-stats" class="stat-row" hidden></div>
+        <p id="decode-error" class="error-banner" hidden></p>
+      </section>
+    </main>
+
+    <footer>
+      <span id="format-info">Loading format info…</span>
+    </footer>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
