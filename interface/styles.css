@@ -54,6 +54,10 @@
 
 * { box-sizing: border-box; }
 
+/* `hidden` must beat any explicit display rule below (e.g. .scramble-fields
+   sets display:flex, which would otherwise win over the UA default). */
+[hidden] { display: none !important; }
+
 html { height: 100%; }
 
 body {
@@ -135,10 +139,10 @@ body {
   min-height: 224px;
 }
 .hero-statement {
-  font-size: clamp(2.25rem, 4.5vw, 4.5rem);
-  line-height: .96;
+  font-size: clamp(1.625rem, 2.9vw, 2.75rem);
+  line-height: 1.02;
   font-weight: 400;
-  letter-spacing: -.035em;
+  letter-spacing: -.03em;
   text-transform: uppercase;
   color: var(--ink);
   margin: 0;
@@ -152,14 +156,16 @@ body {
   justify-content: space-between;
   gap: var(--space-2);
 }
-.hero-clarifier {
-  font-size: .9375rem;
-  line-height: 1.5;
-  color: var(--ink-soft);
-  max-width: 34ch;
+.motto-block { display: flex; flex-direction: column; gap: var(--space-0-5); }
+.motto-kicker { color: var(--muted); margin: 0; }
+
+.hero-description {
+  font-size: clamp(1.125rem, 1.9vw, 1.5rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -.02em;
+  color: var(--ink);
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: -.01em;
 }
 .base-key { display: flex; gap: 1px; }
 .base-key span {
@@ -382,10 +388,9 @@ input[type="password"]:focus-visible { outline: 3px solid var(--neon); border-co
 
 .dna-output ::selection, .dna-output::selection { background: var(--navy); color: #fff; }
 
-.dna-line { display: flex; gap: var(--space-1); align-items: baseline; }
-.dna-gutter { flex: 0 0 auto; min-width: 4ch; text-align: right; color: var(--muted); font-size: .6875rem; user-select: none; }
-.dna-groups { flex: 1 1 auto; word-break: break-all; }
-.base-group { margin-right: var(--space-1); }
+.dna-groups { word-break: break-all; }
+/* One visible gap per block boundary — the grouping is the block structure. */
+.base-group { margin-right: 1.1ch; }
 
 .base-A { color: var(--base-a); }
 .base-C { color: var(--base-c); }
@@ -395,7 +400,8 @@ input[type="password"]:focus-visible { outline: 3px solid var(--neon); border-co
 .monochrome .base-G, .monochrome .base-T { color: var(--ink); }
 
 /* pixel view — one 14px cell per base, letter always inside */
-.pixel-grid { display: flex; flex-wrap: wrap; gap: 1px; }
+.pixel-grid { display: flex; flex-wrap: wrap; gap: 1px; align-items: flex-start; }
+.pixel-block { display: flex; flex-wrap: wrap; gap: 1px; margin-right: 10px; }
 .pixel-cell {
   width: var(--cell);
   height: var(--cell);
@@ -496,6 +502,73 @@ input[type="password"]:focus-visible { outline: 3px solid var(--neon); border-co
 .chapter-head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-1); margin-bottom: var(--space-2); color: var(--muted); }
 .chapter-text { font-size: clamp(1.125rem, 2.4vw, 1.75rem); line-height: 1.3; margin: 0; color: var(--paper); white-space: pre-wrap; word-break: break-word; }
 .chapter[hidden] { display: none; }
+
+/* ---- 12a. block count ------------------------------------------------- */
+.block-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line-soft);
+}
+.block-control .field-label { margin-bottom: 0; }
+#block-count {
+  width: 5rem;
+  min-height: 44px;
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 0 var(--space-0-5);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+#block-count:focus-visible { outline: 3px solid var(--neon); border-color: var(--ink); }
+.block-control .helper { margin: 0; }
+
+/* ---- 12b. synthesize -------------------------------------------------- */
+.action-bridge { gap: var(--space-2); }
+
+.btn-secondary {
+  appearance: none;
+  min-height: 56px;
+  padding: 0 32px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  font-family: var(--font-ui);
+  font-size: .9375rem;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+.btn-secondary:hover { background: var(--ink); color: var(--paper); }
+.btn-secondary:focus-visible { outline: 3px solid var(--neon); outline-offset: 3px; }
+
+#synth-panel { margin-top: var(--space-3); border-top: 1px solid var(--line); }
+
+.synth-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: center;
+  padding: var(--space-3) var(--space-2);
+}
+.synth-fig { min-width: 0; }
+.synth-fig svg { display: block; width: 100%; height: auto; overflow: visible; }
+.synth-copy { display: flex; flex-direction: column; gap: var(--space-0-5); min-width: 0; }
+
+.block-list { display: flex; flex-direction: column; gap: 2px; max-height: 190px; overflow-y: auto; }
+.block-row { display: grid; grid-template-columns: 3ch 1fr; gap: var(--space-1); align-items: baseline; font-family: var(--font-mono); font-size: .8125rem; letter-spacing: .06em; }
+.block-row .bi { color: var(--muted); text-align: right; }
+.block-more { color: var(--muted); font-family: var(--font-mono); font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; margin-top: var(--space-0-5); }
+
+@media (max-width: 900px) { .synth-grid { grid-template-columns: 1fr; } }
 
 /* ---- 13b. below-the-fold sections ------------------------------------- */
 .below-section { margin-top: var(--space-6); }

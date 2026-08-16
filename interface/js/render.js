@@ -1,16 +1,14 @@
 // DOM rendering helpers. No fetch calls here -- this module only turns data
 // already in hand into markup.
 //
-// Follows design_v2.md: bases group in fours on a 14px rhythm (§6.6), the
-// pixel view gives every base a 14px cell with its letter still inside, stats
-// render as a shared-border ledger with tabular numerals (§6.11), and
-// presentational grouping never enters copied data.
+// The sequence is shown split into the blocks the user asked for -- one row
+// per block, numbered -- so the output panel and the plasmid map divide it the
+// same way. The pixel view gives every base a 14px cell with its letter still
+// inside (design_v2.md §6.6), stats render as a shared-border ledger with
+// tabular numerals (§6.11), and block rows never enter copied data.
 
 const BASE_CLASS = { A: "base-A", C: "base-C", G: "base-G", T: "base-T" };
 
-const BASES_PER_GROUP = 4;
-const BASES_PER_LINE = 64;
-const GUTTER_MIN_LINES = 3;
 const MAX_PIXEL_CELLS = 2000;
 
 const EMPTY_FIELD_CELLS = 32; // 8 x 4 pale field for the empty state (§9)
@@ -27,76 +25,69 @@ function emptyState(container, label) {
   container.append(field, text);
 }
 
-/** Sequence view: colored letters, grouped in fours, line-numbered past 3 lines. */
-function renderSequenceView(container, dna) {
-  const lineCount = Math.ceil(dna.length / BASES_PER_LINE);
-  const showGutter = lineCount > GUTTER_MIN_LINES;
-  const fragment = document.createDocumentFragment();
+/** Sequence view: one flowing run of coloured bases with a gap at each block
+ * boundary, so the grouping you see is the grouping you chose. */
+function renderSequenceView(container, blocks) {
+  const wrap = document.createElement("div");
+  wrap.className = "dna-groups";
 
-  for (let start = 0; start < dna.length; start += BASES_PER_LINE) {
-    const line = document.createElement("div");
-    line.className = "dna-line";
-
-    if (showGutter) {
-      const gutter = document.createElement("span");
-      gutter.className = "dna-gutter";
-      gutter.textContent = String(start + 1);
-      line.appendChild(gutter);
+  blocks.forEach((seq) => {
+    const group = document.createElement("span");
+    group.className = "base-group";
+    for (const base of seq) {
+      const span = document.createElement("span");
+      span.className = BASE_CLASS[base] ?? "";
+      span.textContent = base;
+      group.appendChild(span);
     }
+    wrap.appendChild(group);
+  });
 
-    const groups = document.createElement("span");
-    groups.className = "dna-groups";
-    const text = dna.slice(start, start + BASES_PER_LINE);
-
-    for (let g = 0; g < text.length; g += BASES_PER_GROUP) {
-      const group = document.createElement("span");
-      group.className = "base-group";
-      for (const base of text.slice(g, g + BASES_PER_GROUP)) {
-        const span = document.createElement("span");
-        span.className = BASE_CLASS[base] ?? "";
-        span.textContent = base;
-        group.appendChild(span);
-      }
-      groups.appendChild(group);
-    }
-
-    line.appendChild(groups);
-    fragment.appendChild(line);
-  }
-  container.appendChild(fragment);
+  container.appendChild(wrap);
 }
 
-/** Pixel view: one 14px cell per base, letter retained inside the cell. */
-function renderPixelView(container, dna) {
-  const shown = Math.min(dna.length, MAX_PIXEL_CELLS);
+/** Pixel view: every base keeps its own 14px coloured cell, in one continuous
+ * field, with a gap between blocks. */
+function renderPixelView(container, blocks) {
+  const total = blocks.reduce((n, b) => n + b.length, 0);
+  let drawn = 0;
+
   const grid = document.createElement("div");
   grid.className = "pixel-grid";
 
-  for (let i = 0; i < shown; i++) {
-    const cell = document.createElement("span");
-    cell.className = `pixel-cell ${BASE_CLASS[dna[i]] ?? ""}`;
-    cell.textContent = dna[i];
-    grid.appendChild(cell);
+  for (const seq of blocks) {
+    if (drawn >= MAX_PIXEL_CELLS) break;
+    const group = document.createElement("span");
+    group.className = "pixel-block";
+    for (const base of seq) {
+      if (drawn >= MAX_PIXEL_CELLS) break;
+      const cell = document.createElement("span");
+      cell.className = `pixel-cell ${BASE_CLASS[base] ?? ""}`;
+      cell.textContent = base;
+      group.appendChild(cell);
+      drawn += 1;
+    }
+    grid.appendChild(group);
   }
   container.appendChild(grid);
 
-  if (dna.length > MAX_PIXEL_CELLS) {
+  if (total > MAX_PIXEL_CELLS) {
     const note = document.createElement("p");
     note.className = "pixel-truncated mono-label";
-    note.textContent = `Showing ${MAX_PIXEL_CELLS.toLocaleString()} of ${dna.length.toLocaleString()}`;
+    note.textContent = `Showing ${MAX_PIXEL_CELLS.toLocaleString()} of ${total.toLocaleString()}`;
     container.appendChild(note);
   }
 }
 
-/** Render `dna` in the requested view ("sequence" | "pixels"). */
-export function renderDna(container, dna, view = "sequence") {
-  if (!dna) {
+/** Render `blocks` (an array of base runs) in the requested view. */
+export function renderDna(container, blocks, view = "sequence") {
+  if (!blocks || !blocks.length) {
     emptyState(container, "Output appears here.");
     return;
   }
   container.innerHTML = "";
-  if (view === "pixels") renderPixelView(container, dna);
-  else renderSequenceView(container, dna);
+  if (view === "pixels") renderPixelView(container, blocks);
+  else renderSequenceView(container, blocks);
 }
 
 export function renderText(container, text) {

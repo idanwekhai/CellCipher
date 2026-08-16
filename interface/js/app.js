@@ -1,5 +1,5 @@
 import { encodeText, decodeDna, getInfo } from "./api.js";
-import { mountBiology } from "./biology.js";
+import { estimateBases, drawPlasmid, splitBlocks } from "./synthesize.js";
 import {
   renderDna,
   renderText,
@@ -21,12 +21,7 @@ const panels = {
   encode: document.getElementById("panel-encode"),
   decode: document.getElementById("panel-decode"),
 };
-const heroStatement = document.getElementById("hero-statement");
 
-const HERO = {
-  encode: "Text,<br />encoded as DNA.",
-  decode: "DNA,<br />recovered as text.",
-};
 
 for (const button of tabButtons) {
   button.addEventListener("click", () => {
@@ -36,7 +31,6 @@ for (const button of tabButtons) {
       b.setAttribute("aria-selected", String(b === button));
     }
     for (const [name, panel] of Object.entries(panels)) panel.hidden = name !== tab;
-    heroStatement.innerHTML = HERO[tab];
   });
 }
 
@@ -51,8 +45,6 @@ document.querySelector(".tabs").addEventListener("keydown", (event) => {
   event.preventDefault();
 });
 
-// The biology figure sits below the fold, always visible.
-mountBiology(document.getElementById("panel-biology"));
 
 // ---- encode -------------------------------------------------------------
 const encodeInput = document.getElementById("encode-input");
@@ -69,22 +61,66 @@ const encodeScrambleBadge = document.getElementById("encode-scramble-badge");
 const monoToggle = document.getElementById("mono-toggle");
 const viewSeqBtn = document.getElementById("view-seq");
 const viewPixelsBtn = document.getElementById("view-pixels");
+const synthBtn = document.getElementById("synthesize-btn");
+const synthPanel = document.getElementById("synth-panel");
+const synthFigure = document.getElementById("synth-figure");
+const synthSummary = document.getElementById("synth-summary");
+const synthBlocks = document.getElementById("synth-blocks");
+const blockCount = document.getElementById("block-count");
+const blockHint = document.getElementById("block-hint");
 
 let lastDna = "";
 let view = "sequence";
 let monochrome = false;
 
 function syncEncodeOutput() {
-  renderDna(encodeOutput, lastDna, view);
+  // The output panel shows the same division of the sequence as the plasmid.
+  renderDna(encodeOutput, lastDna ? splitBlocks(lastDna, chosenBlocks()) : null, view);
   setMonochrome(encodeOutput, monochrome);
+}
+
+function chosenBlocks() {
+  const v = parseInt(blockCount.value, 10);
+  return Number.isFinite(v) ? Math.max(2, Math.min(24, v)) : 4;
+}
+
+/** Show what the current text and block count will produce, before Encode. */
+function refreshBlockHint() {
+  const n = chosenBlocks();
+  const source = lastDna || null;
+  const bases = source ? source.length : estimateBases(encodeInput.value).bases;
+  if (!bases) {
+    blockHint.textContent = `${n} blocks · — bases each`;
+    return;
+  }
+  const per = Math.floor(bases / n);
+  const extra = bases % n;
+  const spread = extra ? `${per + 1}–${per}` : `${per}`;
+  blockHint.textContent =
+    `${n} blocks · ${spread} bases each · ${bases} total${source ? "" : " (est.)"}`;
 }
 
 encodeInput.addEventListener("input", () => {
   const n = encodeInput.value.length;
-  encodeCharCount.textContent = `${n} character${n === 1 ? "" : "s"}`;
+  const { bytes, packet } = estimateBases(encodeInput.value);
+  encodeCharCount.textContent = n === 0
+    ? "0 characters"
+    : `${n} character${n === 1 ? "" : "s"} · ${bytes} B → ${packet} B packet`;
   encodeBtn.disabled = n === 0;
+  // A new source invalidates any plasmid drawn from the previous encode.
+  lastDna = "";
+  synthPanel.hidden = true;
+  synthBtn.hidden = true;
+  refreshBlockHint();
+});
+
+blockCount.addEventListener("input", () => {
+  refreshBlockHint();
+  syncEncodeOutput();
+  if (!synthPanel.hidden) renderPlasmid();
 });
 encodeBtn.disabled = true;
+refreshBlockHint();
 
 // Stepped loading label: four visual steps, no pretence of server progress.
 function steppedLabel(button, verb) {
@@ -112,6 +148,9 @@ encodeBtn.addEventListener("click", async () => {
     copyDnaBtn.disabled = !result.dna;
     setScrambleBadge(encodeScrambleBadge, result.scrambled);
     encodeScrambleBadge.title = result.nonce_hex ? `nonce: ${result.nonce_hex}` : "";
+    synthBtn.hidden = !result.dna;
+    synthPanel.hidden = true;
+    refreshBlockHint();
   } catch (err) {
     lastDna = "";
     syncEncodeOutput();
@@ -119,6 +158,8 @@ encodeBtn.addEventListener("click", async () => {
     encodeBaseCount.textContent = "— bases";
     copyDnaBtn.disabled = true;
     hideBadge(encodeScrambleBadge);
+    synthBtn.hidden = true;
+    synthPanel.hidden = true;
     showError(encodeError, "Could not encode", "BioCrypt could not reach the codec service.", err.message);
   } finally {
     clearInterval(ticker);
@@ -154,6 +195,37 @@ function setView(next) {
 }
 viewSeqBtn.addEventListener("click", () => setView("sequence"));
 viewPixelsBtn.addEventListener("click", () => setView("pixels"));
+
+// ---- synthesize: draw the encoded sequence as a plasmid ------------------
+function renderPlasmid() {
+  if (!lastDna) return;
+  const n = chosenBlocks();
+  const blocks = drawPlasmid(synthFigure, lastDna, n);
+  synthSummary.textContent = `${blocks.length} blocks · ${lastDna.length} bases`;
+
+  synthBlocks.innerHTML = "";
+  const list = document.createElement("div");
+  list.className = "block-list";
+  blocks.forEach((seq, i) => {
+    const row = document.createElement("div");
+    row.className = "block-row";
+    const idx = document.createElement("span");
+    idx.className = "bi";
+    idx.textContent = String(i + 1);
+    const val = document.createElement("span");
+    val.textContent = seq;
+    row.append(idx, val);
+    list.appendChild(row);
+  });
+  synthBlocks.appendChild(list);
+}
+
+synthBtn.addEventListener("click", () => {
+  if (!lastDna) return;
+  renderPlasmid();
+  synthPanel.hidden = false;
+  synthPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+});
 
 // ---- decode -------------------------------------------------------------
 const decodeInput = document.getElementById("decode-input");
