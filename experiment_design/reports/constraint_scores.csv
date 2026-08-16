@@ -1,0 +1,281 @@
+constraint,passed,construct,state,coordinates,channel,feature_identity,diagnostic,suggested_correction_class
+topology_valid,True,message_register,,,,,Seven expected physical states are present in order.,rebuild state graph
+exact_round_trip,True,message_register,restored_state_0,,,,Restored sequence is byte-for-byte equal to State 0.,inspect inverse site chemistry and transformed interval
+att_product_reconstruction_valid,True,message_register,restored_state_0,,,,"Feature identity, order, orientation, and site state are restored.",restore exact B/P half-site products
+no_unintended_active_pair,True,message_register,state_0,"[(48, 98), (618, 676)]",A,"S1,S5",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_0,"(48, 98)",A,S1,S1 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(48, 98)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(48, 98)",A,S1,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_0,"(618, 676)",A,S5,S5 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(618, 676)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(618, 676)",A,S5,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_0,,A,B,Exact A-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,A,P,Exact A-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,A,L,Exact A-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,A,R,Exact A-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_0,"[(194, 239), (924, 966)]",B,"S2,S7",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_0,"(194, 239)",B,S2,S2 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(194, 239)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(194, 239)",B,S2,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_0,"(924, 966)",B,S7,S7 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(924, 966)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(924, 966)",B,S7,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_0,,B,B,Exact B-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,B,P,Exact B-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,B,L,Exact B-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,B,R,Exact B-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_0,"[(335, 378), (772, 828)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_0,"(335, 378)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(335, 378)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(335, 378)",C,S3,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_0,"(772, 828)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_0,"(772, 828)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_0,"(772, 828)",C,S6,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_0,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_0,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,state_0,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,state_0,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,state_1,"[(48, 102), (622, 676)]",A,"S5,S1",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_1,"(48, 102)",A,S5,S5 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(48, 102)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(48, 102)",A,S5,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_1,"(622, 676)",A,S1,S1 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(622, 676)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(622, 676)",A,S1,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_1,,A,B,Exact A-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,A,P,Exact A-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,A,L,Exact A-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,A,R,Exact A-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_1,"[(481, 526), (924, 966)]",B,"S2,S7",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_1,"(481, 526)",B,S2,S2 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(481, 526)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(481, 526)",B,S2,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_1,"(924, 966)",B,S7,S7 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(924, 966)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(924, 966)",B,S7,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_1,,B,B,Exact B-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,B,P,Exact B-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,B,L,Exact B-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,B,R,Exact B-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_1,"[(342, 385), (772, 828)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_1,"(342, 385)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(342, 385)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(342, 385)",C,S3,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_1,"(772, 828)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_1,"(772, 828)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_1,"(772, 828)",C,S6,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_1,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_1,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,state_1,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,state_1,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,state_2,"[(48, 102), (771, 825)]",A,"S5,S1",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_2,"(48, 102)",A,S5,S5 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(48, 102)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(48, 102)",A,S5,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_2,"(771, 825)",A,S1,S1 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(771, 825)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(771, 825)",A,S1,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_2,,A,B,Exact A-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,A,P,Exact A-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,A,L,Exact A-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,A,R,Exact A-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_2,"[(481, 523), (921, 966)]",B,"S7,S2",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_2,"(481, 523)",B,S7,S7 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(481, 523)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(481, 523)",B,S7,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_2,"(921, 966)",B,S2,S2 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(921, 966)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(921, 966)",B,S2,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_2,,B,B,Exact B-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,B,P,Exact B-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,B,L,Exact B-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,B,R,Exact B-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_2,"[(342, 385), (619, 675)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_2,"(342, 385)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(342, 385)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(342, 385)",C,S3,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_2,"(619, 675)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_2,"(619, 675)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_2,"(619, 675)",C,S6,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_2,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_2,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,state_2,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,state_2,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,state_3,"[(48, 102), (771, 825)]",A,"S5,S1",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_3,"(48, 102)",A,S5,S5 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(48, 102)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(48, 102)",A,S5,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_3,"(771, 825)",A,S1,S1 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(771, 825)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(771, 825)",A,S1,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_3,,A,B,Exact A-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,A,P,Exact A-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,A,L,Exact A-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,A,R,Exact A-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_3,"[(483, 525), (921, 966)]",B,"S7,S2",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_3,"(483, 525)",B,S7,S7 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(483, 525)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(483, 525)",B,S7,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_3,"(921, 966)",B,S2,S2 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(921, 966)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(921, 966)",B,S2,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_3,,B,B,Exact B-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,B,P,Exact B-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,B,L,Exact B-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,B,R,Exact B-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,state_3,"[(342, 387), (621, 675)]",C,"S6,S3",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,state_3,"(342, 387)",C,S6,S6 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(342, 387)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(342, 387)",C,S6,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,state_3,"(621, 675)",C,S3,S3 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,state_3,"(621, 675)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,state_3,"(621, 675)",C,S3,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,state_3,,C,B,Exact C-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,C,P,Exact C-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,C,L,Exact C-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,state_3,,C,R,Exact C-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,state_3,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,state_3,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,reverse_state_2,"[(48, 102), (771, 825)]",A,"S5,S1",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_2,"(48, 102)",A,S5,S5 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(48, 102)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(48, 102)",A,S5,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_2,"(771, 825)",A,S1,S1 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(771, 825)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(771, 825)",A,S1,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_2,,A,B,Exact A-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,A,P,Exact A-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,A,L,Exact A-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,A,R,Exact A-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,reverse_state_2,"[(481, 523), (921, 966)]",B,"S7,S2",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_2,"(481, 523)",B,S7,S7 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(481, 523)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(481, 523)",B,S7,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_2,"(921, 966)",B,S2,S2 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(921, 966)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(921, 966)",B,S2,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_2,,B,B,Exact B-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,B,P,Exact B-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,B,L,Exact B-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,B,R,Exact B-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,reverse_state_2,"[(342, 385), (619, 675)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_2,"(342, 385)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(342, 385)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(342, 385)",C,S3,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_2,"(619, 675)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_2,"(619, 675)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_2,"(619, 675)",C,S6,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_2,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_2,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,reverse_state_2,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,reverse_state_2,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,reverse_state_1,"[(48, 102), (622, 676)]",A,"S5,S1",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_1,"(48, 102)",A,S5,S5 exact L sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(48, 102)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(48, 102)",A,S5,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_1,"(622, 676)",A,S1,S1 exact R sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(622, 676)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(622, 676)",A,S1,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_1,,A,B,Exact A-B count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,A,P,Exact A-P count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,A,L,Exact A-L count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,A,R,Exact A-R count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,reverse_state_1,"[(481, 526), (924, 966)]",B,"S2,S7",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_1,"(481, 526)",B,S2,S2 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(481, 526)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(481, 526)",B,S2,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_1,"(924, 966)",B,S7,S7 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(924, 966)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(924, 966)",B,S7,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_1,,B,B,Exact B-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,B,P,Exact B-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,B,L,Exact B-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,B,R,Exact B-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,reverse_state_1,"[(342, 385), (772, 828)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,reverse_state_1,"(342, 385)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(342, 385)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(342, 385)",C,S3,Typed orientation is -1.,set an explicit physical strand
+required_site_integrity,True,message_register,reverse_state_1,"(772, 828)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,reverse_state_1,"(772, 828)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,reverse_state_1,"(772, 828)",C,S6,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,reverse_state_1,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,reverse_state_1,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,reverse_state_1,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,reverse_state_1,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+no_unintended_active_pair,True,message_register,restored_state_0,"[(48, 98), (618, 676)]",A,"S1,S5",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,restored_state_0,"(48, 98)",A,S1,S1 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(48, 98)",A,S1,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(48, 98)",A,S1,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,restored_state_0,"(618, 676)",A,S5,S5 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(618, 676)",A,S5,Core GCGGTCTC is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(618, 676)",A,S5,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,restored_state_0,,A,B,Exact A-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,A,P,Exact A-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,A,L,Exact A-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,A,R,Exact A-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,restored_state_0,"[(194, 239), (924, 966)]",B,"S2,S7",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,restored_state_0,"(194, 239)",B,S2,S2 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(194, 239)",B,S2,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(194, 239)",B,S2,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,restored_state_0,"(924, 966)",B,S7,S7 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(924, 966)",B,S7,Core TT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(924, 966)",B,S7,Typed orientation is 1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,restored_state_0,,B,B,Exact B-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,B,P,Exact B-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,B,L,Exact B-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,B,R,Exact B-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_active_pair,True,message_register,restored_state_0,"[(335, 378), (772, 828)]",C,"S3,S6",Observed 2 cognate sites; exactly two are required.,remove duplicated or missing cognate site
+required_site_integrity,True,message_register,restored_state_0,"(335, 378)",C,S3,S3 exact B sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(335, 378)",C,S3,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(335, 378)",C,S3,Typed orientation is 1.,set an explicit physical strand
+required_site_integrity,True,message_register,restored_state_0,"(772, 828)",C,S6,S6 exact P sequence check.,restore authoritative site arms and core
+central_dinucleotide_valid,True,message_register,restored_state_0,"(772, 828)",C,S6,Core TCAAT is retained at a valid channel crossover.,restore the channel crossover core
+site_orientation_valid,True,message_register,restored_state_0,"(772, 828)",C,S6,Typed orientation is -1.,set an explicit physical strand
+no_unintended_att_site,True,message_register,restored_state_0,,C,B,Exact C-B count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,C,P,Exact C-P count is 1; expected 1.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,C,L,Exact C-L count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_unintended_att_site,True,message_register,restored_state_0,,C,R,Exact C-R count is 0; expected 0.,redesign neutral sequence or remove duplicate site
+no_forbidden_ambiguity,True,message_register,restored_state_0,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+cross_state_sequence_safety,True,message_register,restored_state_0,,,,Every channel remains uniquely represented in this state.,remove duplicated exact attachment sites
+wrong_order_events_classified,True,message_register,,,,,All six forward and reverse orders are enumerated; only ABC and CBA complete.,classify every permutation to a physical outcome
+controller_truth_table_valid,True,controllers,,,,,Six intended commands pass; no-input and simultaneous-input cases fail closed.,repair state AND one-hot drug logic
+genbank_annotation_integrity,True,01_message_register,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,01_message_register,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,01_message_register,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,02_forward_controller,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,02_forward_controller,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,02_forward_controller,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,03_reverse_controller,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,03_reverse_controller,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,03_reverse_controller,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,state_0,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,state_0,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,state_0,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,state_1,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,state_1,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,state_1,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,state_2,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,state_2,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,state_2,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,state_3,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,state_3,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,state_3,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,reverse_state_2,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,reverse_state_2,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,reverse_state_2,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,reverse_state_1,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,reverse_state_1,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,reverse_state_1,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide
+genbank_annotation_integrity,True,restored_state_0,,,,,Record and all feature coordinates validate.,repair record annotations and feature locations
+valid_cds_translation,True,restored_state_0,,,,,All CDS translations exactly match annotated amino-acid sequences.,restore source CDS frame and translation
+no_forbidden_ambiguity,True,restored_state_0,,,,,Only unambiguous A/C/G/T symbols are present.,resolve every ambiguous nucleotide

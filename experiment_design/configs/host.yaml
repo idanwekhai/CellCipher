@@ -1,0 +1,14 @@
+organism: Escherichia coli str. K-12 substr. MG1655
+taxid: 511145
+reference_accession: NC_000913.3
+reference_file: ../artifacts/retrieved_parts/NC_000913.3.fasta
+message_copy_number: 1
+landing_locus: null
+landing_locus_status: unresolved
+controller_backbone:
+  name: pACYC177
+  accession: X06402.1
+  source_file: ../artifacts/retrieved_parts/X06402.1.gb
+  topology: circular
+  role: low-copy development controller
+  mobilization_deficient: no mobilization genes annotated in the source record

@@ -1,0 +1,47 @@
+runs:
+  - id: esm2_integrase_rdf_embeddings
+    decision: prioritize biochemical diversity and informative crosstalk controls
+    tool: esm2-embedding
+    checkpoint: esm2_t48_15B_UR50D
+    candidate_set: three integrases and three RDFs
+    applicability: proteins are within the 1022-residue ESM-2 limit
+    design_change_threshold: near-redundant embedding similarity would trigger replacement review
+    seed: 0
+    randomness_used: false
+    ran_on: modal
+    status: completed
+    output: artifacts/model_outputs/esm2/results.json
+    limitation: embedding similarity is not an orthogonality assay
+  - id: viennarna_translation_initiation_windows
+    decision: flag unusual folding in the nine annotated RBS/start windows
+    tool: viennarna-prediction
+    checkpoint: ViennaRNA RNAfold thermodynamic model
+    candidate_set: three forward and six reverse translation-initiation windows
+    temperature_c: 37
+    seed: 0
+    randomness_used: false
+    ran_on: modal
+    status: completed
+    output: artifacts/model_outputs/viennarna/results.json
+    limitation: placeholder regulatory parts and MFE alone cannot predict expression
+  - id: conventional_sequence_analysis
+    decision: reject hard-invalid sequences and characterize soft hazards
+    tool: local deterministic implementation
+    checkpoint: null
+    seed: null
+    randomness_used: false
+    status: completed
+    output: reports/conventional_sequence_analysis.json
+  - id: evo2_construct_scoring
+    decision: rank complete construct plausibility
+    tool: evo2-score
+    status: skipped
+    reason: native CDSs and regulatory placeholders dominate; a genomic likelihood score cannot resolve gate biology
+  - id: bacterial_regulatory_ml
+    decision: assess promoter, RBS, terminator and readthrough plausibility
+    status: skipped
+    reason: exact state-gate promoter/operator sequences are unresolved; deterministic motif scans are reported instead
+  - id: structural_complex_prediction
+    decision: prioritize cognate and noncognate integrase-RDF interactions
+    status: skipped
+    reason: available structural predictions would not override direct evidence or replace the required crosstalk matrix

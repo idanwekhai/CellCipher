@@ -1,0 +1,184 @@
+LOCUS       state_0                  966 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  Pareto payload candidate payload_23_17_fab0313a11df; same frozen
+            topology.
+ACCESSION   SRV1_candidate_2
+VERSION     SRV1_candidate_2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  Escherichia coli K-12 candidate chromosomal cassette
+            .
+COMMENT     ##Design-Data-START##
+            Project-Version :: 1.0.0-candidate
+            Design-Status   :: candidate; not synthesis-ready
+            Sequence-SHA256 ::
+            7305535ca176f14dda948ac34b597af2e43f2e30e76f6d2185ec79d5b383fcb3
+            Host-Context    :: non-pathogenic Escherichia coli K-12
+            Provenance :: see parts_registry.tsv and retrieval_manifest.json
+            ##Design-Data-END##
+            Computational proof-of-concept only. Regulatory placeholders are not
+            synthesis-ready and no in-cell performance is claimed.
+FEATURES             Location/Qualifiers
+     source          1..966
+                     /label="complete_construct"
+                     /organism="synthetic DNA construct"
+                     /host="Escherichia coli K-12"
+                     /topology="linear"
+                     /design_status="candidate; topology-valid; not
+                     synthesis-ready"
+     misc_feature    1..48
+                     /label="REGISTER_ORIGIN"
+                     /orientation_state="+"
+                     /canonical_identity="REGISTER_ORIGIN"
+                     /design_status="candidate"
+                     /note="Defined comparison and export origin; not a
+                     replication origin."
+     protein_bind    49..98
+                     /label="S1"
+                     /bound_moiety="LSI channel A"
+                     /orientation_state="+"
+                     /canonical_identity="S1"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="A"
+                     /site_class="B"
+                     /site_origin="B"
+                     /accessibility="true"
+     misc_feature    99..194
+                     /label="payload_A"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="A"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     protein_bind    195..239
+                     /label="S2"
+                     /bound_moiety="LSI channel B"
+                     /orientation_state="+"
+                     /canonical_identity="S2"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="B"
+                     /site_class="B"
+                     /site_origin="B"
+                     /accessibility="true"
+     misc_feature    240..335
+                     /label="payload_B"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="B"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     protein_bind    336..378
+                     /label="S3"
+                     /bound_moiety="LSI channel C"
+                     /orientation_state="+"
+                     /canonical_identity="S3"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="C"
+                     /site_class="B"
+                     /site_origin="B"
+                     /accessibility="true"
+     misc_feature    379..474
+                     /label="payload_C"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="C"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     misc_feature    475..522
+                     /label="S4_inert_boundary"
+                     /function="logical boundary only"
+                     /orientation_state="+"
+                     /canonical_identity="S4"
+                     /design_status="candidate"
+                     /note="Inert logical boundary; not an attachment site."
+     misc_feature    523..618
+                     /label="payload_D"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="D"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     protein_bind    complement(619..676)
+                     /label="S5"
+                     /bound_moiety="LSI channel A"
+                     /orientation_state="-"
+                     /canonical_identity="S5"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="A"
+                     /site_class="P"
+                     /site_origin="P"
+                     /accessibility="true"
+     misc_feature    677..772
+                     /label="payload_E"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="E"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     protein_bind    complement(773..828)
+                     /label="S6"
+                     /bound_moiety="LSI channel C"
+                     /orientation_state="-"
+                     /canonical_identity="S6"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="C"
+                     /site_class="P"
+                     /site_origin="P"
+                     /accessibility="true"
+     misc_feature    829..924
+                     /label="payload_F"
+                     /function="neutral sequencing barcode; no biological
+                     function"
+                     /orientation_state="+"
+                     /canonical_identity="F"
+                     /design_status="candidate"
+                     /note="Synthetic neutral barcode; no biological function
+                     claimed."
+     protein_bind    925..966
+                     /label="S7"
+                     /bound_moiety="LSI channel B"
+                     /orientation_state="+"
+                     /canonical_identity="S7"
+                     /design_status="candidate"
+                     /note="typed topology element"
+                     /channel="B"
+                     /site_class="P"
+                     /site_origin="P"
+                     /accessibility="true"
+     misc_feature    1..48
+                     /label="unresolved_chromosomal_integration_interface"
+                     /design_status="unresolved"
+                     /note="No landing locus or homology arms were invented."
+ORIGIN
+        1 tcttaggtcg actctggtac gatagccggc ggatggtcaa cacataattc ggccggcttg
+       61 tcgacgacgg cggtctccgt cgtcaggatc atccgggcga ccaagtatcg acgttactcg
+      121 ctgaaccttg ccttaggcgt gcgtgggaaa gctcgggaga atgtccgggg aggtcttaac
+      181 atccagttga ggattgcggg tgccagggcg tgcccttggg ctccccgggc gcgtactccc
+      241 attcaggcta cgccttaggg tgtgcaggtt cgcacacaca ctatctgagg atgagtagac
+      301 atcggtatgg atgacaccag tataaaaaca ccgacctgat aattgccaac acaattaaca
+      361 tctcaatcaa ggtaaatgga actcggacat gacaaagtac ctaggcattg ggcggttcct
+      421 aaactacatc tatttagtac ccctcctgtg tgtcaccctg cgcggtcaag taaacagttg
+      481 ccgccagatt acgttgtaac acgcttccat taatcctcac gatttaaata tgctaaacaa
+      541 ctgactccat cctcagtgtt ttaaacggcc tagtaaaaaa acttgaaata aacactgaac
+      601 cgctaagagc agctcgaagt cggggtttgt accgtacacc actgagaccg cggtggttga
+      661 ccagacaaac cacgacgtgt tgtacgtcta gagggcagac ggcgtaaggt gagctagatc
+      721 acttcacgcc ctatcgtcga ctcatttgtg acggacagcg tgcagcgtct actttagtta
+      781 ccttaattga aataaacgaa ataaaaactc gcaattaagc gagttggatc aaccctgcgc
+      841 gcgaacctga atcagacggc tgtgagttgt tgctgagaga agcgcttccg atccccctac
+      901 ctaagttaac agcgcccgta aggagtgccc caactggggt aacctttgag ttctctcagt
+      961 tggggg
+//

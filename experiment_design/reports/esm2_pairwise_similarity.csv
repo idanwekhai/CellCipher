@@ -1,0 +1,16 @@
+left,right,cosine_similarity,interpretation
+A_integrase_NP_075302.1,A_rdf_NP_075313.1,0.5115294267303634,prioritization only; not evidence of orthogonality
+A_integrase_NP_075302.1,B_integrase_NP_047974.1,0.893620919681462,prioritization only; not evidence of orthogonality
+A_integrase_NP_075302.1,B_rdf_NP_047948.2,0.6440765326312291,prioritization only; not evidence of orthogonality
+A_integrase_NP_075302.1,C_integrase_NP_112664.1,0.7730861574525983,prioritization only; not evidence of orthogonality
+A_integrase_NP_075302.1,C_rdf_NP_112670.1,0.484292451984313,prioritization only; not evidence of orthogonality
+A_rdf_NP_075313.1,B_integrase_NP_047974.1,0.4548945273602516,prioritization only; not evidence of orthogonality
+A_rdf_NP_075313.1,B_rdf_NP_047948.2,0.4611011587735243,prioritization only; not evidence of orthogonality
+A_rdf_NP_075313.1,C_integrase_NP_112664.1,0.48638874674673954,prioritization only; not evidence of orthogonality
+A_rdf_NP_075313.1,C_rdf_NP_112670.1,0.7048593690973083,prioritization only; not evidence of orthogonality
+B_integrase_NP_047974.1,B_rdf_NP_047948.2,0.6480704573269492,prioritization only; not evidence of orthogonality
+B_integrase_NP_047974.1,C_integrase_NP_112664.1,0.7581239916746857,prioritization only; not evidence of orthogonality
+B_integrase_NP_047974.1,C_rdf_NP_112670.1,0.44775053746924093,prioritization only; not evidence of orthogonality
+B_rdf_NP_047948.2,C_integrase_NP_112664.1,0.5893115276794143,prioritization only; not evidence of orthogonality
+B_rdf_NP_047948.2,C_rdf_NP_112670.1,0.4963117506113935,prioritization only; not evidence of orthogonality
+C_integrase_NP_112664.1,C_rdf_NP_112670.1,0.4814525028240155,prioritization only; not evidence of orthogonality

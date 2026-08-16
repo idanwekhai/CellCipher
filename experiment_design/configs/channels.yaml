@@ -1,0 +1,95 @@
+channels:
+  A:
+    system: Bxb1
+    integrase:
+      accession: NC_002656.1
+      protein_id: NP_075302.1
+      source_coordinates_0_based: [29490, 30993]
+      strand: 1
+    rdf:
+      name: gp47
+      accession: NC_002656.1
+      protein_id: NP_075313.1
+      source_coordinates_0_based: [35874, 36015]
+      strand: -1
+    sites:
+      source: FlyBase FBto0000358 and FBto0000359
+      core: GCGGTCTC
+      attB_core_index: 21
+      attP_core_index: 25
+      attB: TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC
+      attP: GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC
+    evidence: anchor channel with direct RDF and rewritable-memory evidence
+  B:
+    system: phiC31
+    integrase:
+      accession: NC_001978.3
+      protein_id: NP_047974.1
+      source_coordinates_0_based: [38446, 40264]
+      strand: 1
+    rdf:
+      name: gp3
+      accession: NC_001978.3
+      protein_id: NP_047948.2
+      source_coordinates_0_based: [23097, 23832]
+      strand: 1
+    sites:
+      source: FlyBase FBto0000356 and FBto0000357
+      core: TT
+      attB_core_index: 21
+      attP_core_index: 21
+      attB: TGCGGGTGCCAGGGCGTGCCCTTGGGCTCCCCGGGCGCGTACTCC
+      attP: GTGCCCCAACTGGGGTAACCTTTGAGTTCTCTCAGTTGGGGG
+    evidence: direct biochemical reversal and mammalian-cell reversal evidence
+    concern: low integrase-only excision has been reported
+  C:
+    system: TP901-1
+    integrase:
+      accession: NC_002747.1
+      protein_id: NP_112664.1
+      source_coordinates_0_based: [29, 1487]
+      strand: -1
+    rdf:
+      name: Xis
+      accession: NC_002747.1
+      protein_id: NP_112670.1
+      source_coordinates_0_based: [4367, 4562]
+      strand: 1
+    sites:
+      source: FlyBase FBto0000520 and FBto0000521
+      core: TCAAT
+      attB_core_index: 27
+      attP_core_index: 38
+      attB: CTGATAATTGCCAACACAATTAACATCTCAATCAAGGTAAATG
+      attP: TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATTAAGGTAACTAAA
+    evidence: direct integrase, minimal-site, and excisionase evidence
+provisional_selection:
+  status: requires empirical all-by-all site and RDF crosstalk testing
+  rationale:
+    - complete native integrase and directionality-factor CDS provenance
+    - exact literature-curated attachment sites
+    - distinct phage origins and experimentally established forward chemistry
+    - reverse chemistry has direct evidence for each channel
+sensors:
+  A:
+    promoter: P_lac
+    regulator: LacI
+    inducer: IPTG
+    assignment: Channel A
+    evidence: established E. coli sensor and CRISPR-controller precedent
+    constraints: lacI must be present; avoid glucose-mediated catabolite repression
+  B:
+    promoter: P_LtetO-1
+    regulator: TetR
+    inducer: aTc
+    assignment: Channel B
+    evidence: established orthogonal E. coli sensor
+    constraints: tetR must be supplied; aTc is light sensitive
+  C:
+    promoter: P_BAD
+    regulator: AraC
+    inducer: L-arabinose
+    assignment: Channel C
+    evidence: established E. coli sensor
+    constraints: delta_araBAD and optional constitutive araE improve homogeneity
+sensor_selection_status: leading conventional set; exact promoter/operator sequences are unresolved placeholders
