@@ -69,15 +69,21 @@ export function hideStats(container) {
   container.innerHTML = "";
 }
 
-/** Status badge: icon + label + color -- never color alone (see dataviz status rules). */
+/** Status badge: icon + label + color -- never color alone (see dataviz status rules).
+ * "Invalid" covers more than a checksum mismatch -- bad alphabet, bad magic
+ * bytes, wrong version, or wrong passphrase can all land here. */
 export function renderIntegrityBadge(el, valid) {
   el.hidden = false;
   el.className = `badge ${valid ? "good" : "critical"}`;
-  el.textContent = valid ? "✓ Checksum valid" : "✗ Checksum invalid";
+  el.textContent = valid ? "✓ Verified" : "✗ Invalid";
 }
 
 export function hideBadge(el) {
   el.hidden = true;
+}
+
+export function setScrambleBadge(el, scrambled) {
+  el.hidden = !scrambled;
 }
 
 export function showError(el, message) {

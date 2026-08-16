@@ -6,6 +6,7 @@ import {
   hideStats,
   renderIntegrityBadge,
   hideBadge,
+  setScrambleBadge,
   showError,
   hideError,
 } from "./render.js";
@@ -35,6 +36,9 @@ const encodeStats = document.getElementById("encode-stats");
 const encodeError = document.getElementById("encode-error");
 const encodeCharCount = document.getElementById("encode-char-count");
 const copyDnaBtn = document.getElementById("copy-dna-btn");
+const encodePassphrase = document.getElementById("encode-passphrase");
+const encodeUseNonce = document.getElementById("encode-use-nonce");
+const encodeScrambleBadge = document.getElementById("encode-scramble-badge");
 
 let lastDna = "";
 
@@ -48,16 +52,22 @@ encodeBtn.addEventListener("click", async () => {
   encodeBtn.disabled = true;
   encodeBtn.textContent = "Encoding…";
   try {
-    const result = await encodeText(text);
+    const result = await encodeText(text, {
+      passphrase: encodePassphrase.value,
+      useNonce: encodeUseNonce.checked,
+    });
     lastDna = result.dna;
     renderDna(encodeOutput, result.dna);
     renderStats(encodeStats, result.stats);
     copyDnaBtn.disabled = !result.dna;
+    setScrambleBadge(encodeScrambleBadge, result.scrambled);
+    encodeScrambleBadge.title = result.nonce_hex ? `nonce: ${result.nonce_hex}` : "";
   } catch (err) {
     lastDna = "";
     renderDna(encodeOutput, "");
     hideStats(encodeStats);
     copyDnaBtn.disabled = true;
+    hideBadge(encodeScrambleBadge);
     showError(encodeError, `Encode failed: ${err.message}`);
   } finally {
     encodeBtn.disabled = false;
@@ -81,6 +91,8 @@ const decodeStats = document.getElementById("decode-stats");
 const decodeError = document.getElementById("decode-error");
 const decodeCharCount = document.getElementById("decode-char-count");
 const integrityBadge = document.getElementById("integrity-badge");
+const decodePassphrase = document.getElementById("decode-passphrase");
+const decodeScrambleBadge = document.getElementById("decode-scramble-badge");
 
 decodeInput.addEventListener("input", () => {
   const bases = decodeInput.value.replace(/\s/g, "").length;
@@ -93,7 +105,8 @@ decodeBtn.addEventListener("click", async () => {
   decodeBtn.disabled = true;
   decodeBtn.textContent = "Decoding…";
   try {
-    const result = await decodeDna(dna);
+    const result = await decodeDna(dna, { passphrase: decodePassphrase.value });
+    setScrambleBadge(decodeScrambleBadge, Boolean(result.scrambled));
     if (result.valid) {
       renderText(decodeOutput, result.text);
       renderStats(decodeStats, result.stats);
@@ -102,12 +115,15 @@ decodeBtn.addEventListener("click", async () => {
       renderText(decodeOutput, "");
       hideStats(decodeStats);
       renderIntegrityBadge(integrityBadge, false);
-      showError(decodeError, `${result.error_type}: ${result.error}`);
+      const hint =
+        result.error_type === "PassphraseRequiredError" ? " — enter the passphrase above and try again." : "";
+      showError(decodeError, `${result.error_type}: ${result.error}${hint}`);
     }
   } catch (err) {
     renderText(decodeOutput, "");
     hideStats(decodeStats);
     hideBadge(integrityBadge);
+    hideBadge(decodeScrambleBadge);
     showError(decodeError, `Decode request failed: ${err.message}`);
   } finally {
     decodeBtn.disabled = false;
@@ -121,7 +137,8 @@ decodeBtn.addEventListener("click", async () => {
   try {
     const info = await getInfo();
     const modeList = info.modes.map((m) => `${m.name}${m.implemented ? "" : " (planned)"}`).join(", ");
-    footer.textContent = `Packet format v${info.format_version} · magic "${info.magic}" · modes: ${modeList}`;
+    const scramble = info.scrambling?.supported ? ` · scrambling: magic "${info.scrambling.magic}"` : "";
+    footer.textContent = `Packet format v${info.format_version} · magic "${info.magic}" · modes: ${modeList}${scramble}`;
   } catch {
     footer.textContent = "biocrypt — text ⇄ DNA encoding/storage codec.";
   }

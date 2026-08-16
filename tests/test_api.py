@@ -63,3 +63,46 @@ def test_decode_rejects_arbitrary_dna_gracefully():
     response = client.post("/api/decode", json={"dna": "ACGT" * 50})
     assert response.status_code == 200
     assert response.json()["valid"] is False
+
+
+def test_info_advertises_scrambling():
+    body = client.get("/api/info").json()
+    assert body["scrambling"]["supported"] is True
+    assert body["scrambling"]["magic"] == "SC"
+
+
+def test_encode_with_passphrase_is_scrambled_and_round_trips():
+    text = "secret message for the scramble layer"
+    encoded = client.post("/api/encode", json={"text": text, "passphrase": "hunter2"}).json()
+    assert encoded["scrambled"] is True
+    assert encoded["nonce_hex"] is not None
+
+    decoded = client.post("/api/decode", json={"dna": encoded["dna"], "passphrase": "hunter2"}).json()
+    assert decoded["valid"] is True
+    assert decoded["text"] == text
+    assert decoded["scrambled"] is True
+
+
+def test_decode_scrambled_dna_without_passphrase_reports_clear_error():
+    encoded = client.post("/api/encode", json={"text": "shh", "passphrase": "hunter2"}).json()
+    response = client.post("/api/decode", json={"dna": encoded["dna"]})
+    body = response.json()
+    assert body["valid"] is False
+    assert body["error_type"] == "PassphraseRequiredError"
+    assert body["scrambled"] is True  # hinted even though decode failed
+
+
+def test_decode_scrambled_dna_with_wrong_passphrase_fails_not_silently():
+    encoded = client.post("/api/encode", json={"text": "shh", "passphrase": "hunter2"}).json()
+    response = client.post("/api/decode", json={"dna": encoded["dna"], "passphrase": "not-it"})
+    body = response.json()
+    assert body["valid"] is False
+    assert body["text"] is None
+
+
+def test_no_nonce_scramble_is_reproducible_via_api():
+    payload = {"text": "deterministic please", "passphrase": "hunter2", "use_nonce": False}
+    first = client.post("/api/encode", json=payload).json()
+    second = client.post("/api/encode", json=payload).json()
+    assert first["dna"] == second["dna"]
+    assert first["nonce_hex"] is None

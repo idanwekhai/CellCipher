@@ -37,6 +37,24 @@
           <div class="card">
             <label class="field-label" for="encode-input">Text</label>
             <textarea id="encode-input" placeholder="Type or paste text to encode as DNA…" rows="10"></textarea>
+
+            <details class="scramble-details">
+              <summary>🔒 Scramble with a passphrase (optional)</summary>
+              <div class="scramble-fields">
+                <input
+                  id="encode-passphrase"
+                  type="password"
+                  placeholder="Passphrase (leave blank for no scrambling)"
+                  autocomplete="off"
+                />
+                <label class="checkbox-row">
+                  <input id="encode-use-nonce" type="checkbox" checked />
+                  Use a per-message nonce (recommended — same passphrase scrambles
+                  differently every time)
+                </label>
+              </div>
+            </details>
+
             <div class="card-footer">
               <span class="hint" id="encode-char-count">0 characters</span>
               <button id="encode-btn" class="btn primary">Encode → DNA</button>
@@ -46,7 +64,10 @@
           <div class="card">
             <div class="card-header-row">
               <label class="field-label" for="encode-output">DNA sequence</label>
-              <button id="copy-dna-btn" class="btn ghost small" disabled>Copy</button>
+              <span class="header-row-right">
+                <span id="encode-scramble-badge" class="badge info" hidden>🔒 Scrambled</span>
+                <button id="copy-dna-btn" class="btn ghost small" disabled>Copy</button>
+              </span>
             </div>
             <div id="encode-output" class="dna-output" aria-label="Encoded DNA sequence">
               <span class="placeholder">DNA output will appear here.</span>
@@ -64,6 +85,16 @@
           <div class="card">
             <label class="field-label" for="decode-input">DNA sequence</label>
             <textarea id="decode-input" placeholder="Paste a DNA sequence (A/C/G/T) to decode…" rows="10"></textarea>
+
+            <div class="scramble-fields">
+              <input
+                id="decode-passphrase"
+                type="password"
+                placeholder="Passphrase (required only if this DNA was scrambled)"
+                autocomplete="off"
+              />
+            </div>
+
             <div class="card-footer">
               <span class="hint" id="decode-char-count">0 bases</span>
               <button id="decode-btn" class="btn primary">Decode → Text</button>
@@ -73,7 +104,10 @@
           <div class="card">
             <div class="card-header-row">
               <label class="field-label" for="decode-output">Recovered text</label>
-              <span id="integrity-badge" class="badge" hidden></span>
+              <span class="header-row-right">
+                <span id="decode-scramble-badge" class="badge info" hidden>🔒 Scrambled</span>
+                <span id="integrity-badge" class="badge" hidden></span>
+              </span>
             </div>
             <div id="decode-output" class="text-output">
               <span class="placeholder">Decoded text will appear here.</span>

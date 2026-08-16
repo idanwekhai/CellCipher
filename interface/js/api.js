@@ -21,12 +21,19 @@ async function request(path, options) {
   return response.json();
 }
 
-export function encodeText(text) {
-  return request("/encode", { method: "POST", body: JSON.stringify({ text }) });
+export function encodeText(text, { passphrase, useNonce = true } = {}) {
+  const body = { text };
+  if (passphrase) {
+    body.passphrase = passphrase;
+    body.use_nonce = useNonce;
+  }
+  return request("/encode", { method: "POST", body: JSON.stringify(body) });
 }
 
-export function decodeDna(dna) {
-  return request("/decode", { method: "POST", body: JSON.stringify({ dna }) });
+export function decodeDna(dna, { passphrase } = {}) {
+  const body = { dna };
+  if (passphrase) body.passphrase = passphrase;
+  return request("/decode", { method: "POST", body: JSON.stringify(body) });
 }
 
 export function getInfo() {

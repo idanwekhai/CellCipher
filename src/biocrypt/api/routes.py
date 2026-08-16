@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from biocrypt.codec import digital, packet
+from biocrypt.codec import packet, pipeline, scramble
 from biocrypt.codec.errors import DecodeError
 from biocrypt.api.schemas import (
     DecodeRequest,
@@ -15,6 +15,7 @@ from biocrypt.api.schemas import (
     EncodeResponse,
     InfoResponse,
     ModeInfo,
+    ScrambleInfo,
     StatsModel,
 )
 
@@ -23,28 +24,38 @@ router = APIRouter(prefix="/api", tags=["codec"])
 
 @router.post("/encode", response_model=EncodeResponse)
 def encode_text(request: EncodeRequest) -> EncodeResponse:
-    result = digital.encode(request.text)
+    result = pipeline.encode(request.text, passphrase=request.passphrase, use_nonce=request.use_nonce)
     return EncodeResponse(
         dna=result.dna,
         stats=StatsModel.model_validate(result.stats),
+        scrambled=result.scrambled,
+        nonce_hex=result.nonce_hex,
     )
 
 
 @router.post("/decode", response_model=DecodeResponse)
 def decode_dna(request: DecodeRequest) -> DecodeResponse:
-    """Decode DNA back to text. Malformed or corrupted DNA is reported as
-    `valid: false` with an explanatory `error`, not an HTTP error -- decoding
+    """Decode DNA back to text. Malformed or corrupted DNA -- including a
+    missing or wrong passphrase for scrambled DNA -- is reported as
+    `valid: false` with an explanatory `error`, not an HTTP error: decoding
     untrusted/damaged input is the expected use case, not an exceptional one.
     """
     try:
-        result = digital.decode(request.dna)
+        result = pipeline.decode(request.dna, passphrase=request.passphrase)
     except DecodeError as exc:
-        return DecodeResponse(valid=False, error=str(exc), error_type=type(exc).__name__)
+        return DecodeResponse(
+            valid=False,
+            error=str(exc),
+            error_type=type(exc).__name__,
+            scrambled=scramble.is_scrambled(request.dna),
+        )
 
     return DecodeResponse(
         valid=True,
         text=result.text,
         stats=StatsModel.model_validate(result.stats),
+        scrambled=result.scrambled,
+        nonce_hex=result.nonce_hex,
     )
 
 
@@ -74,4 +85,16 @@ def info() -> InfoResponse:
         magic=packet.MAGIC.decode("ascii"),
         bases_per_byte=4,
         modes=modes,
+        scrambling=ScrambleInfo(
+            supported=True,
+            magic=scramble.MAGIC.decode("ascii"),
+            block_bytes=scramble.BLOCK_BYTES,
+            nonce_bytes=scramble.NONCE_BYTES,
+            description=(
+                "Optional keyed block-transposition layer on top of any mode's "
+                "DNA output. A transposition cipher, not a substitution one -- "
+                "short messages (few blocks) are brute-forceable regardless of "
+                "passphrase strength."
+            ),
+        ),
     )

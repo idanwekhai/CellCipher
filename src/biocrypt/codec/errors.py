@@ -52,3 +52,20 @@ class PayloadLengthMismatchError(DecodeError):
 
 class TextDecodeError(DecodeError):
     """The recovered payload bytes are not valid UTF-8."""
+
+
+class InvalidScramblePreambleError(DecodeError):
+    """The DNA claims to be scrambled but its (always-unscrambled) preamble
+    is malformed -- bad magic, or too short to hold its declared fields."""
+
+
+class UnsupportedScrambleVersionError(DecodeError):
+    """The scramble preamble declares a version this build doesn't understand."""
+
+
+class PassphraseRequiredError(DecodeError):
+    """The DNA is scrambled (its preamble says so) but no passphrase was
+    supplied to unscramble it. Note a *wrong* passphrase is not detected
+    here -- it silently yields the wrong block order, which then fails one
+    of the inner packet's own checks (bad magic bytes and/or a CRC32
+    mismatch) instead, one layer up in `digital.decode`."""

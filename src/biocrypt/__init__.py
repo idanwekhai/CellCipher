@@ -1,11 +1,15 @@
 """biocrypt: a versioned text <-> DNA (A/C/G/T) encoding/storage codec.
 
-This is an *encoding* system, not an encryption system. Anyone who knows the
-format (published below) can decode the DNA back to text without a secret
-key. Treat DNA produced here the way you'd treat base64 or hex: reversible,
-inspectable, not confidential.
+The base digital-mode pipeline (`biocrypt.codec.digital`) is *encoding*, not
+encryption: anyone who knows the format (published in the README) can decode
+DNA it produces without a secret key -- treat it like base64 or hex.
+
+Passing a `passphrase` to `encode`/`decode` (this module's top-level API)
+opts into an additional keyed block-scramble layer (`biocrypt.codec.scramble`)
+that *is* a real, if simple, cipher -- see that module's docstring for its
+honest limitations (it's a transposition cipher, not a substitution one).
 """
 
-from biocrypt.codec.digital import DecodeResult, EncodeResult, decode, encode
+from biocrypt.codec.pipeline import DecodeResult, EncodeResult, decode, encode
 
 __all__ = ["encode", "decode", "EncodeResult", "DecodeResult"]

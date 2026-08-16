@@ -1,9 +1,11 @@
 # biocrypt
 
-A text ⇄ DNA **encoding/storage** codec — not encryption. Text becomes a
-sequence of `A`/`C`/`G`/`T`, and back, using a published, versioned format.
-Anyone who knows the format (documented below) can decode it; there is no
-secret key. Treat it like base64 or hex, not like a cipher.
+A text ⇄ DNA codec. The base pipeline is **encoding, not encryption** — text
+becomes a sequence of `A`/`C`/`G`/`T`, and back, using a published, versioned
+format with no secret key; treat it like base64 or hex. On top of that,
+there's an *optional* passphrase-scrambled mode that is a real (if simple)
+keyed cipher — see [Scrambling](#scrambling-optional-keyed-layer) for exactly
+what that does and doesn't protect against.
 
 The project ships two things sharing one codec library:
 
@@ -47,15 +49,18 @@ uv run pytest
 
 | Endpoint          | Method | Description                                   |
 |-------------------|--------|------------------------------------------------|
-| `/api/encode`     | POST   | `{"text": "..."}` → DNA + stats                |
-| `/api/decode`     | POST   | `{"dna": "..."}` → text + integrity status     |
-| `/api/info`       | GET    | Format version, magic bytes, supported modes   |
+| `/api/encode`     | POST   | `{"text": "...", "passphrase"?, "use_nonce"?}` → DNA + stats |
+| `/api/decode`     | POST   | `{"dna": "...", "passphrase"?}` → text + integrity status    |
+| `/api/info`       | GET    | Format version, magic bytes, supported modes, scrambling info |
 | `/api/health`     | GET    | Liveness check                                 |
 
-`/api/decode` never 500s on bad input — malformed, foreign, or corrupted DNA
-comes back as `{"valid": false, "error": "...", "error_type": "..."}` with
-HTTP 200, since decoding untrusted/damaged DNA is the expected use case, not
-an exceptional one.
+`/api/decode` never 500s on bad input — malformed, foreign, corrupted, or
+wrongly/un-scrambled DNA comes back as
+`{"valid": false, "error": "...", "error_type": "..."}` with HTTP 200, since
+decoding untrusted/damaged input is the expected use case, not an exceptional
+one. The response also always includes `"scrambled": true/false`, detected
+from the DNA's own (unscrambled) preamble even when decoding fails — so a
+client can tell "wrong/missing passphrase" apart from "not scrambled at all."
 
 Example:
 
@@ -105,6 +110,59 @@ magic (2B) | version (1B) | mode (1B) | flags (1B) | original_length (4B) | payl
 `GET /api/info` returns this format's version/magic/modes at runtime so
 clients don't have to hardcode assumptions about it.
 
+## Scrambling (optional keyed layer)
+
+Passing a `passphrase` wraps the digital-mode DNA in a second, independent
+step: a **keyed block-transposition cipher**. It shuffles the DNA in 4-byte
+(16-base) blocks, using a permutation derived from the passphrase, so the
+result can't be reordered back to text without that same passphrase.
+
+```
+dna (from digital.encode)
+  -> pad to a multiple of 4 bytes (0-3 padding bytes, length recorded)
+  -> split into N 4-byte blocks
+  -> derive a permutation from HMAC-SHA256(sha256(passphrase), nonce, counter)
+  -> reorder the blocks by that permutation
+  -> prepend an unscrambled preamble: magic("SC") | version | flags | pad_len [ | nonce ]
+```
+
+The preamble is deliberately **not** scrambled — a decoder (or the UI) can
+always read it to learn "this is scrambled" and pull out the nonce, with no
+passphrase needed. Only the block *order* is secret-dependent. This is also
+how `is_scrambled()` distinguishes scrambled output from plain digital-mode
+DNA (which starts with a different magic, `"BC"`) without needing a key.
+
+**Nonce**, toggled per-request via `use_nonce` (default on): a random 8-byte
+value mixed into the permutation so the same passphrase shuffles differently
+every time. Without it, the same passphrase + same block count always
+produces byte-for-byte identical scrambled DNA — fine for reproducibility,
+but it means an attacker who collects multiple messages under one reused key
+can start correlating fixed structure (like the packet header always being
+in the same disguised position).
+
+**Wrong passphrase, by design, isn't specially detected.** `scramble.py` has
+no way to know a passphrase is wrong — it just produces a different (wrong)
+block order. That wrong order then fails one of `digital.decode`'s own
+checks one layer up (almost always the packet's magic bytes, since
+reordering displaces the header) and comes back as a normal decode error —
+reusing integrity checks we already had, instead of adding a second one.
+
+**Honest limitations** (this is a transposition cipher, not a substitution
+one):
+- It preserves the exact multiset of block contents — only their order
+  changes. Long messages with repeated/structured content can still leak
+  patterns to frequency analysis.
+- Short messages are brute-forceable regardless of passphrase strength: N
+  blocks have N! possible orderings, and small N is small. Five blocks is
+  only 120 arrangements — trying all of them and checking which one passes
+  the packet's checksum takes microseconds. Real security needs enough
+  blocks and/or a second, substitution-based layer (e.g. XOR-ing the payload
+  against a passphrase-derived keystream before this).
+- The passphrase is turned into key bytes with a single SHA-256 (no salt, no
+  iteration count) — fine for demonstrating the permutation mechanism, but
+  it means the passphrase itself is only as hard to brute-force as one hash
+  per guess. A hardened version would use PBKDF2/scrypt instead.
+
 ## Project layout
 
 ```
@@ -116,6 +174,8 @@ biocrypt/
 │   │   ├── compression.py     #   Brotli wrapper
 │   │   ├── packet.py          #   versioned header framing + CRC32
 │   │   ├── digital.py         #   the mode-1 pipeline (encode/decode)
+│   │   ├── scramble.py        #   optional keyed block-transposition layer
+│   │   ├── pipeline.py        #   composes digital.py + scramble.py
 │   │   ├── stats.py           #   byte count, GC%, homopolymer run, etc.
 │   │   └── errors.py          #   typed exceptions (DecodeError subclasses)
 │   └── api/
@@ -130,8 +190,10 @@ biocrypt/
 ```
 
 The codec package has no web dependencies, so it's usable from a script or
-notebook (`from biocrypt.codec import digital; digital.encode("hi")`)
-independent of the API.
+notebook independent of the API: `biocrypt.encode("hi")` /
+`biocrypt.decode(dna)` for the full pipeline (pass `passphrase=` to opt into
+scrambling), or `biocrypt.codec.digital.encode("hi")` directly for plain
+digital-mode only.
 
 ## Modes
 

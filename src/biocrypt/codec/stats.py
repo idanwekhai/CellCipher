@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import dataclasses
 from dataclasses import dataclass
 
 from biocrypt.codec import nucleotide
@@ -49,4 +50,19 @@ def compute_stats(
         longest_homopolymer=nucleotide.longest_homopolymer(dna),
         bits_per_base=bits_per_base,
         checksum_hex=f"{checksum:08x}",
+    )
+
+
+def recompute_dna_fields(base: CodecStats, dna: str) -> CodecStats:
+    """Copy `base`, recomputing only the fields that depend on the final DNA
+    string. Used when an outer layer (e.g. scramble.py's preamble + shuffle)
+    changes the actual DNA a user sees without changing the underlying byte
+    count, checksum, or compression choice it describes."""
+    bits_per_base = (8 * base.byte_count / len(dna)) if dna else 0.0
+    return dataclasses.replace(
+        base,
+        dna_length=len(dna),
+        gc_content_percent=nucleotide.gc_content(dna),
+        longest_homopolymer=nucleotide.longest_homopolymer(dna),
+        bits_per_base=bits_per_base,
     )
