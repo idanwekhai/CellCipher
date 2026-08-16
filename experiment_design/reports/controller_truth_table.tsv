@@ -1,0 +1,113 @@
+mode	state	drug_a	drug_b	drug_c	residual_integrase	residual_rdf	incomplete_previous_transition	lost_state_signal	noncognate_state_signal	promoter_leak	active_drugs	integrases	rdfs	blocked	boolean_logic_valid	regulatory_plausibility	experimental_unknowns	diagnostic
+forward	0	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	0	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 0.
+forward	0	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 0.
+forward	0	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	0	True	False	False			False	False	False		A	('A',)	()	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntA.
+forward	0	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	0	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	0	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	1	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	1	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 1.
+forward	1	False	True	False			False	False	False		B	('B',)	()	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntB.
+forward	1	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	1	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 1.
+forward	1	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	1	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	1	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	2	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	2	False	False	True			False	False	False		C	('C',)	()	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntC.
+forward	2	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 2.
+forward	2	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	2	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 2.
+forward	2	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	2	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	2	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	3	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	3	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 3.
+forward	3	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 3.
+forward	3	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	3	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 3.
+forward	3	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	3	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	3	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	0	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 0.
+reverse	0	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 0.
+reverse	0	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	0	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 0.
+reverse	0	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	0	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	0	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	1	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 1.
+reverse	1	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 1.
+reverse	1	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	1	True	False	False			False	False	False		A	('A',)	('A',)	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntA+RDFA.
+reverse	1	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	1	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	1	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	2	False	False	True			False	False	False		C	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel C is not enabled in State 2.
+reverse	2	False	True	False			False	False	False		B	('B',)	('B',)	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntB+RDFB.
+reverse	2	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	2	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 2.
+reverse	2	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	2	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	2	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False			False	False	False		none	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	3	False	False	True			False	False	False		C	('C',)	('C',)	False	True	sensor choices have E. coli precedent; composite state AND gates are unvalidated	()	Command IntC+RDFC.
+reverse	3	False	True	False			False	False	False		B	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel B is not enabled in State 3.
+reverse	3	False	True	True			False	False	False		BC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	3	True	False	False			False	False	False		A	()	()	True	True	exact-state gate is a required, unresolved sequence interface	()	Channel A is not enabled in State 3.
+reverse	3	True	False	True			False	False	False		AC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	3	True	True	False			False	False	False		AB	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+reverse	3	True	True	True			False	False	False		ABC	()	()	True	True	one-hot input guard is a required, unresolved sequence interface	()	No input or simultaneous inputs are blocked.
+forward	0	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+forward	0	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+forward	0	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+forward	0	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+forward	0	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+forward	0	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+forward	1	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+forward	1	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+forward	1	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+forward	1	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+forward	1	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+forward	1	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+forward	2	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+forward	2	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+forward	2	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+forward	2	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+forward	2	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+forward	2	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+forward	3	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+forward	3	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+forward	3	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+forward	3	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+forward	3	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+forward	3	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+reverse	0	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+reverse	0	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+reverse	1	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+reverse	1	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+reverse	2	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+reverse	2	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False	A		False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual integrase A',)	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False		B	False	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('residual RDF B',)	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False			True	False	False			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('incomplete prior transition',)	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False			False	True	False			()	()	True	True	fail-closed Boolean abstraction; sequence implementation unresolved	('state-signal loss',)	No state signal permits no commanded output.
+reverse	3	False	False	False			False	False	True			()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('noncognate state signal',)	No input or simultaneous inputs are blocked.
+reverse	3	False	False	False			False	False	False	C		()	()	True	True	one-hot input guard is a required, unresolved sequence interface	('promoter leak C',)	No input or simultaneous inputs are blocked.

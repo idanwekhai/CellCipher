@@ -1,129 +1,233 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>biocrypt — text ⇄ DNA codec</title>
+  <title>BioCrypt</title>
+  <meta name="description" content="Synthetic cells as physical encryption machines. Text, encoded as DNA — every step visible." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="viz-root">
-    <header class="topbar">
-      <div class="brand">
-        <span class="brand-mark">🧬</span>
+
+  <!-- ── 1. masthead ──────────────────────────────────────────────────── -->
+  <header class="masthead">
+    <div class="wrap masthead-inner micro">
+      <span><strong>BioCrypt</strong> / Format 01</span>
+      <span class="masthead-right">
+        <label class="visually-hidden" for="mode-select">Mode</label>
+        <select id="mode-select">
+          <option value="digital" selected>Digital 2-bit</option>
+          <option value="synthesis" disabled>Synthesis-safe / Planned</option>
+        </select>
+        <span id="api-status">● API Online</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- ── 2. hero ──────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
         <div>
-          <h1>biocrypt</h1>
-          <p class="tagline">Text ⇄ DNA encoding &amp; storage — reversible, not encrypted.</p>
+          <h1 class="hero-statement">Synthetic cells as physical<br />encryption machines.</h1>
+        </div>
+        <div class="hero-side">
+          <div class="motto-block">
+            <p class="motto-kicker mono-label">CellCipher</p>
+            <p class="hero-description">Message → DNA.</p>
+          </div>
+          <div class="base-key" aria-hidden="true">
+            <span class="key-a">A</span><span class="key-c">C</span><span class="key-g">G</span><span class="key-t">T</span>
+          </div>
         </div>
       </div>
-      <div class="mode-picker">
-        <label for="mode-select">Mode</label>
-        <select id="mode-select">
-          <option value="digital" selected>Digital (compressed 2-bit)</option>
-          <option value="synthesis" disabled>Synthesis-safe (coming soon)</option>
-        </select>
-      </div>
-    </header>
 
-    <nav class="tabs" role="tablist">
-      <button class="tab-btn active" data-tab="encode" role="tab" aria-selected="true">Encode</button>
-      <button class="tab-btn" data-tab="decode" role="tab" aria-selected="false">Decode</button>
-    </nav>
+      <nav class="tabs" role="tablist" aria-label="Operation">
+        <button class="tab-btn active" data-tab="encode" role="tab" id="tab-encode" aria-selected="true" aria-controls="panel-encode">Encode</button>
+        <button class="tab-btn" data-tab="decode" role="tab" id="tab-decode" aria-selected="false" aria-controls="panel-decode">Decode</button>
+      </nav>
+    </div>
+  </section>
 
-    <main>
-      <!-- ENCODE -->
-      <section id="panel-encode" class="panel active" role="tabpanel">
-        <div class="grid two-col">
-          <div class="card">
-            <label class="field-label" for="encode-input">Text</label>
-            <textarea id="encode-input" placeholder="Type or paste text to encode as DNA…" rows="10"></textarea>
+  <main>
+    <!-- ── ENCODE ─────────────────────────────────────────────────────── -->
+    <section id="panel-encode" class="panel" role="tabpanel" aria-labelledby="tab-encode">
+      <div class="wrap">
+        <div class="workspace">
 
-            <details class="scramble-details">
-              <summary>🔒 Scramble with a passphrase (optional)</summary>
-              <div class="scramble-fields">
-                <input
-                  id="encode-passphrase"
-                  type="password"
-                  placeholder="Passphrase (leave blank for no scrambling)"
-                  autocomplete="off"
-                />
-                <label class="checkbox-row">
-                  <input id="encode-use-nonce" type="checkbox" checked />
-                  Use a per-message nonce (recommended — same passphrase scrambles
-                  differently every time)
-                </label>
+          <div class="module">
+            <div class="module-header mono-label"><span><span class="num">01</span> Source</span></div>
+            <div class="module-body">
+              <label class="visually-hidden" for="encode-input">Text to encode</label>
+              <textarea id="encode-input" placeholder="Type or paste text to encode."></textarea>
+
+              <div class="block-control">
+                <label class="field-label mono-label" for="block-count">Blocks</label>
+                <input id="block-count" type="number" min="2" max="24" step="1" value="4" />
+                <span class="helper" id="block-hint">4 blocks · — bases each</span>
               </div>
-            </details>
 
-            <div class="card-footer">
-              <span class="hint" id="encode-char-count">0 characters</span>
-              <button id="encode-btn" class="btn primary">Encode → DNA</button>
+              <!-- Passphrase scrambling is hidden for now. The fields stay in
+                   the DOM so an empty passphrase keeps flowing through and the
+                   codec simply skips the scramble layer; remove `hidden` to
+                   bring it back. -->
+              <details class="scramble-details" hidden>
+                <summary class="mono-label">Security layer +</summary>
+                <div class="scramble-fields">
+                  <h2 class="scramble-heading">Passphrase scrambling</h2>
+                  <div>
+                    <label class="field-label mono-label" for="encode-passphrase">Passphrase</label>
+                    <input id="encode-passphrase" type="password" placeholder="Leave blank for none" autocomplete="off" />
+                  </div>
+                  <label class="checkbox-row mono-label">
+                    <input id="encode-use-nonce" type="checkbox" checked />
+                    Unique output each time
+                  </label>
+                  <p class="disclaimer">Reorders DNA blocks. This is not modern encryption.</p>
+                </div>
+              </details>
+            </div>
+            <div class="meta-row mono-label">
+              <span id="encode-char-count">0 characters</span>
+              <span class="meta-row-right"><span id="encode-scramble-badge" class="badge info" hidden>↝ Scrambling on</span></span>
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-header-row">
-              <label class="field-label" for="encode-output">DNA sequence</label>
-              <span class="header-row-right">
-                <span id="encode-scramble-badge" class="badge info" hidden>🔒 Scrambled</span>
-                <button id="copy-dna-btn" class="btn ghost small" disabled>Copy</button>
+          <div class="module">
+            <div class="module-header mono-label">
+              <span><span class="num">02</span> Output</span>
+              <span class="toggle" role="group" aria-label="Sequence view">
+                <button type="button" id="view-seq" aria-pressed="true">Sequence</button>
+                <button type="button" id="view-pixels" aria-pressed="false">Pixels</button>
               </span>
             </div>
-            <div id="encode-output" class="dna-output" aria-label="Encoded DNA sequence">
-              <span class="placeholder">DNA output will appear here.</span>
+            <div class="module-body">
+              <div id="encode-output" class="dna-output" aria-label="Encoded DNA sequence" aria-live="polite">
+                <span class="placeholder-field" aria-hidden="true"></span>
+                <span class="placeholder mono-label">Output appears here.</span>
+              </div>
+            </div>
+            <div class="meta-row mono-label">
+              <span id="encode-base-count">— bases</span>
+              <span class="meta-row-right">
+                <button id="mono-toggle" class="btn-text" type="button">Monochrome</button>
+                <button id="copy-dna-btn" class="btn-text" disabled>Copy sequence</button>
+              </span>
             </div>
           </div>
+
         </div>
+
+        <div class="action-bridge">
+          <button id="encode-btn" class="btn-primary pixel-corners">Encode → DNA</button>
+          <button id="synthesize-btn" class="btn-secondary pixel-corners" hidden>Synthesize →</button>
+        </div>
+
+        <!-- plasmid map, revealed by Synthesize -->
+        <section id="synth-panel" class="workspace" style="grid-template-columns:1fr" hidden>
+          <div class="module">
+            <div class="module-header mono-label">
+              <span><span class="num">03</span> Plasmid map</span>
+              <span class="meta-row-right"><span id="synth-summary">—</span></span>
+            </div>
+            <div class="synth-grid">
+              <div class="synth-fig">
+                <svg id="synth-figure" viewBox="0 0 480 480" role="img"
+                  aria-label="Plasmid map of the encoded sequence, one arc per 16-base block"></svg>
+              </div>
+              <div class="synth-copy">
+                <h2 class="bio-title">Your message as a construct.</h2>
+                <!-- <p class="bio-body">
+                  You chose how many blocks to divide the sequence into, and each arc
+                  is one of them. The blue ticks are the boundaries: on a real plasmid
+                  these are the <strong>recombinase recognition sites</strong> an enzyme
+                  can address.
+                </p> -->
+                <p class="caption-label mono-label">Block breakdown</p>
+                <div class="seq-readout" id="synth-blocks"></div>
+                <p class="disclaimer" style="margin-top:var(--space-1)">
+                  Site 1 and the final site are the same physical point — marked
+                  <strong>ORI</strong> — because a plasmid is a closed loop.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <div id="encode-stats" class="stat-row" hidden></div>
-        <p id="encode-error" class="error-banner" hidden></p>
-      </section>
+        <p id="encode-error" class="error-banner" role="alert" hidden></p>
+      </div>
+    </section>
 
-      <!-- DECODE -->
-      <section id="panel-decode" class="panel" role="tabpanel" hidden>
-        <div class="grid two-col">
-          <div class="card">
-            <label class="field-label" for="decode-input">DNA sequence</label>
-            <textarea id="decode-input" placeholder="Paste a DNA sequence (A/C/G/T) to decode…" rows="10"></textarea>
+    <!-- ── DECODE ─────────────────────────────────────────────────────── -->
+    <section id="panel-decode" class="panel" role="tabpanel" aria-labelledby="tab-decode" hidden>
+      <div class="wrap">
+        <div class="workspace">
 
-            <div class="scramble-fields">
-              <input
-                id="decode-passphrase"
-                type="password"
-                placeholder="Passphrase (required only if this DNA was scrambled)"
-                autocomplete="off"
-              />
+          <div class="module">
+            <div class="module-header mono-label"><span><span class="num">01</span> Source</span></div>
+            <div class="module-body">
+              <label class="visually-hidden" for="decode-input">DNA sequence to decode</label>
+              <textarea id="decode-input" placeholder="Paste a BioCrypt sequence."></textarea>
+
+              <!-- Hidden alongside the encode-side scrambling controls. -->
+              <div class="scramble-fields" style="margin-top:var(--space-2)" hidden>
+                <label class="field-label mono-label" for="decode-passphrase">Passphrase</label>
+                <input id="decode-passphrase" type="password" placeholder="Only if the sequence was scrambled" autocomplete="off" />
+              </div>
             </div>
+            <div class="meta-row mono-label">
+              <span id="decode-char-count">0 bases</span>
+              <span class="meta-row-right"><span id="decode-scramble-badge" class="badge info" hidden>↝ Scrambled</span></span>
+            </div>
+          </div>
 
-            <div class="card-footer">
-              <span class="hint" id="decode-char-count">0 bases</span>
-              <button id="decode-btn" class="btn primary">Decode → Text</button>
+          <div class="module">
+            <div class="module-header mono-label"><span><span class="num">02</span> Output</span></div>
+            <div class="module-body">
+              <div id="decode-output" class="text-output" aria-live="polite">
+                <span class="placeholder mono-label">Recovered text appears here.</span>
+              </div>
+            </div>
+            <div class="meta-row mono-label">
+              <span id="decode-meta">—</span>
+              <span class="meta-row-right"><span id="integrity-badge" class="badge" hidden></span></span>
             </div>
           </div>
 
-          <div class="card">
-            <div class="card-header-row">
-              <label class="field-label" for="decode-output">Recovered text</label>
-              <span class="header-row-right">
-                <span id="decode-scramble-badge" class="badge info" hidden>🔒 Scrambled</span>
-                <span id="integrity-badge" class="badge" hidden></span>
-              </span>
-            </div>
-            <div id="decode-output" class="text-output">
-              <span class="placeholder">Decoded text will appear here.</span>
-            </div>
-          </div>
         </div>
 
-        <div id="decode-stats" class="stat-row" hidden></div>
-        <p id="decode-error" class="error-banner" hidden></p>
-      </section>
-    </main>
+        <div class="action-bridge">
+          <button id="decode-btn" class="btn-primary pixel-corners">Decode → Text</button>
+        </div>
 
-    <footer>
+        <section class="chapter" id="decode-chapter" hidden>
+          <div class="chapter-head mono-label">
+            <span>Recovered text</span>
+            <button id="copy-text-btn" class="btn-text" style="color:inherit">Copy text</button>
+          </div>
+          <p class="chapter-text" id="decode-chapter-text"></p>
+        </section>
+
+        <div id="decode-stats" class="stat-row" hidden></div>
+        <p id="decode-error" class="error-banner" role="alert" hidden></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="tech-footer">
+    <div class="wrap tech-footer-inner micro">
       <span id="format-info">Loading format info…</span>
-    </footer>
-  </div>
+      <span>CellCipher — synthetic cells as physical encryption machines.</span>
+    </div>
+  </footer>
 
   <script type="module" src="js/app.js"></script>
 </body>

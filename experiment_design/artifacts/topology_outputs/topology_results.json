@@ -1,0 +1,1150 @@
+{
+  "states": [
+    {
+      "name": "state_0",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S1(B,+)",
+        "A+",
+        "S2(B,+)",
+        "B+",
+        "S3(B,+)",
+        "C+",
+        "S4(inert,+)",
+        "D+",
+        "S5(P,-)",
+        "E+",
+        "S6(P,-)",
+        "F+",
+        "S7(P,+)"
+      ],
+      "payload_order": [
+        "+A",
+        "+B",
+        "+C",
+        "+D",
+        "+E",
+        "+F"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S1": [
+          48,
+          98
+        ],
+        "A": [
+          98,
+          194
+        ],
+        "S2": [
+          194,
+          239
+        ],
+        "B": [
+          239,
+          335
+        ],
+        "S3": [
+          335,
+          378
+        ],
+        "C": [
+          378,
+          474
+        ],
+        "S4": [
+          474,
+          522
+        ],
+        "D": [
+          522,
+          618
+        ],
+        "S5": [
+          618,
+          676
+        ],
+        "E": [
+          676,
+          772
+        ],
+        "S6": [
+          772,
+          828
+        ],
+        "F": [
+          828,
+          924
+        ],
+        "S7": [
+          924,
+          966
+        ]
+      }
+    },
+    {
+      "name": "state_1",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "06c396c7409de7b0e7456cb4a7dbfe9fb1764562dbc52a12e49d45543143b1f6",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S5(L,+)",
+        "D-",
+        "S4(inert,-)",
+        "C-",
+        "S3(B,-)",
+        "B-",
+        "S2(B,-)",
+        "A-",
+        "S1(R,-)",
+        "E+",
+        "S6(P,-)",
+        "F+",
+        "S7(P,+)"
+      ],
+      "payload_order": [
+        "-D",
+        "-C",
+        "-B",
+        "-A",
+        "+E",
+        "+F"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S5": [
+          48,
+          102
+        ],
+        "D": [
+          102,
+          198
+        ],
+        "S4": [
+          198,
+          246
+        ],
+        "C": [
+          246,
+          342
+        ],
+        "S3": [
+          342,
+          385
+        ],
+        "B": [
+          385,
+          481
+        ],
+        "S2": [
+          481,
+          526
+        ],
+        "A": [
+          526,
+          622
+        ],
+        "S1": [
+          622,
+          676
+        ],
+        "E": [
+          676,
+          772
+        ],
+        "S6": [
+          772,
+          828
+        ],
+        "F": [
+          828,
+          924
+        ],
+        "S7": [
+          924,
+          966
+        ]
+      }
+    },
+    {
+      "name": "state_2",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "a755d134a61a5319f5c969cc3576812922aa367bfdcb4555c5e7ea475fba614b",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S5(L,+)",
+        "D-",
+        "S4(inert,-)",
+        "C-",
+        "S3(B,-)",
+        "B-",
+        "S7(L,-)",
+        "F-",
+        "S6(P,+)",
+        "E-",
+        "S1(R,+)",
+        "A+",
+        "S2(R,+)"
+      ],
+      "payload_order": [
+        "-D",
+        "-C",
+        "-B",
+        "-F",
+        "-E",
+        "+A"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S5": [
+          48,
+          102
+        ],
+        "D": [
+          102,
+          198
+        ],
+        "S4": [
+          198,
+          246
+        ],
+        "C": [
+          246,
+          342
+        ],
+        "S3": [
+          342,
+          385
+        ],
+        "B": [
+          385,
+          481
+        ],
+        "S7": [
+          481,
+          523
+        ],
+        "F": [
+          523,
+          619
+        ],
+        "S6": [
+          619,
+          675
+        ],
+        "E": [
+          675,
+          771
+        ],
+        "S1": [
+          771,
+          825
+        ],
+        "A": [
+          825,
+          921
+        ],
+        "S2": [
+          921,
+          966
+        ]
+      }
+    },
+    {
+      "name": "state_3",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "b60293c357c39fe4272839b24cfbf8640d2e343110610cc574af583bc1ca5e97",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S5(L,+)",
+        "D-",
+        "S4(inert,-)",
+        "C-",
+        "S6(L,-)",
+        "F+",
+        "S7(L,+)",
+        "B+",
+        "S3(R,+)",
+        "E-",
+        "S1(R,+)",
+        "A+",
+        "S2(R,+)"
+      ],
+      "payload_order": [
+        "-D",
+        "-C",
+        "+F",
+        "+B",
+        "-E",
+        "+A"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S5": [
+          48,
+          102
+        ],
+        "D": [
+          102,
+          198
+        ],
+        "S4": [
+          198,
+          246
+        ],
+        "C": [
+          246,
+          342
+        ],
+        "S6": [
+          342,
+          387
+        ],
+        "F": [
+          387,
+          483
+        ],
+        "S7": [
+          483,
+          525
+        ],
+        "B": [
+          525,
+          621
+        ],
+        "S3": [
+          621,
+          675
+        ],
+        "E": [
+          675,
+          771
+        ],
+        "S1": [
+          771,
+          825
+        ],
+        "A": [
+          825,
+          921
+        ],
+        "S2": [
+          921,
+          966
+        ]
+      }
+    },
+    {
+      "name": "reverse_state_2",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "a755d134a61a5319f5c969cc3576812922aa367bfdcb4555c5e7ea475fba614b",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S5(L,+)",
+        "D-",
+        "S4(inert,-)",
+        "C-",
+        "S3(B,-)",
+        "B-",
+        "S7(L,-)",
+        "F-",
+        "S6(P,+)",
+        "E-",
+        "S1(R,+)",
+        "A+",
+        "S2(R,+)"
+      ],
+      "payload_order": [
+        "-D",
+        "-C",
+        "-B",
+        "-F",
+        "-E",
+        "+A"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S5": [
+          48,
+          102
+        ],
+        "D": [
+          102,
+          198
+        ],
+        "S4": [
+          198,
+          246
+        ],
+        "C": [
+          246,
+          342
+        ],
+        "S3": [
+          342,
+          385
+        ],
+        "B": [
+          385,
+          481
+        ],
+        "S7": [
+          481,
+          523
+        ],
+        "F": [
+          523,
+          619
+        ],
+        "S6": [
+          619,
+          675
+        ],
+        "E": [
+          675,
+          771
+        ],
+        "S1": [
+          771,
+          825
+        ],
+        "A": [
+          825,
+          921
+        ],
+        "S2": [
+          921,
+          966
+        ]
+      }
+    },
+    {
+      "name": "reverse_state_1",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "06c396c7409de7b0e7456cb4a7dbfe9fb1764562dbc52a12e49d45543143b1f6",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S5(L,+)",
+        "D-",
+        "S4(inert,-)",
+        "C-",
+        "S3(B,-)",
+        "B-",
+        "S2(B,-)",
+        "A-",
+        "S1(R,-)",
+        "E+",
+        "S6(P,-)",
+        "F+",
+        "S7(P,+)"
+      ],
+      "payload_order": [
+        "-D",
+        "-C",
+        "-B",
+        "-A",
+        "+E",
+        "+F"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S5": [
+          48,
+          102
+        ],
+        "D": [
+          102,
+          198
+        ],
+        "S4": [
+          198,
+          246
+        ],
+        "C": [
+          246,
+          342
+        ],
+        "S3": [
+          342,
+          385
+        ],
+        "B": [
+          385,
+          481
+        ],
+        "S2": [
+          481,
+          526
+        ],
+        "A": [
+          526,
+          622
+        ],
+        "S1": [
+          622,
+          676
+        ],
+        "E": [
+          676,
+          772
+        ],
+        "S6": [
+          772,
+          828
+        ],
+        "F": [
+          828,
+          924
+        ],
+        "S7": [
+          924,
+          966
+        ]
+      }
+    },
+    {
+      "name": "restored_state_0",
+      "molecule_type": "linear",
+      "linearization_origin": "REGISTER_ORIGIN",
+      "length_bp": 966,
+      "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+      "physical_elements": [
+        "REGISTER_ORIGIN+",
+        "S1(B,+)",
+        "A+",
+        "S2(B,+)",
+        "B+",
+        "S3(B,+)",
+        "C+",
+        "S4(inert,+)",
+        "D+",
+        "S5(P,-)",
+        "E+",
+        "S6(P,-)",
+        "F+",
+        "S7(P,+)"
+      ],
+      "payload_order": [
+        "+A",
+        "+B",
+        "+C",
+        "+D",
+        "+E",
+        "+F"
+      ],
+      "coordinates": {
+        "REGISTER_ORIGIN": [
+          0,
+          48
+        ],
+        "S1": [
+          48,
+          98
+        ],
+        "A": [
+          98,
+          194
+        ],
+        "S2": [
+          194,
+          239
+        ],
+        "B": [
+          239,
+          335
+        ],
+        "S3": [
+          335,
+          378
+        ],
+        "C": [
+          378,
+          474
+        ],
+        "S4": [
+          474,
+          522
+        ],
+        "D": [
+          522,
+          618
+        ],
+        "S5": [
+          618,
+          676
+        ],
+        "E": [
+          676,
+          772
+        ],
+        "S6": [
+          772,
+          828
+        ],
+        "F": [
+          828,
+          924
+        ],
+        "S7": [
+          924,
+          966
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "channel": "A",
+      "chemistry": "integrase",
+      "pair_state": "BP",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S1",
+        "S5"
+      ],
+      "product_site_sequences": [
+        "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+        "TCGGCCGGCTTGTCGACGACGGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    },
+    {
+      "channel": "B",
+      "chemistry": "integrase",
+      "pair_state": "BP",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S2",
+        "S7"
+      ],
+      "product_site_sequences": [
+        "GTGCCCCAACTGGGGTAACCTTTGGGCTCCCCGGGCGCGTACTCC",
+        "TGCGGGTGCCAGGGCGTGCCCTTGAGTTCTCTCAGTTGGGGG"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    },
+    {
+      "channel": "C",
+      "chemistry": "integrase",
+      "pair_state": "BP",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S3",
+        "S6"
+      ],
+      "product_site_sequences": [
+        "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATCAAGGTAAATG",
+        "CTGATAATTGCCAACACAATTAACATCTCAATTAAGGTAACTAAA"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    },
+    {
+      "channel": "C",
+      "chemistry": "integrase+rdf",
+      "pair_state": "LR",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S6",
+        "S3"
+      ],
+      "product_site_sequences": [
+        "CTGATAATTGCCAACACAATTAACATCTCAATCAAGGTAAATG",
+        "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATTAAGGTAACTAAA"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    },
+    {
+      "channel": "B",
+      "chemistry": "integrase+rdf",
+      "pair_state": "LR",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S7",
+        "S2"
+      ],
+      "product_site_sequences": [
+        "TGCGGGTGCCAGGGCGTGCCCTTGGGCTCCCCGGGCGCGTACTCC",
+        "GTGCCCCAACTGGGGTAACCTTTGAGTTCTCTCAGTTGGGGG"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    },
+    {
+      "channel": "A",
+      "chemistry": "integrase+rdf",
+      "pair_state": "LR",
+      "relative_orientation": "antiparallel",
+      "outcome": "inversion",
+      "site_ids": [
+        "S5",
+        "S1"
+      ],
+      "product_site_sequences": [
+        "TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+        "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+      ],
+      "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+    }
+  ],
+  "forward_orders": [
+    {
+      "order": "ABC",
+      "events": [
+        {
+          "channel": "A",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S1",
+            "S5"
+          ],
+          "product_site_sequences": [
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "B",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S2",
+            "S7"
+          ],
+          "product_site_sequences": [
+            "GTGCCCCAACTGGGGTAACCTTTGGGCTCCCCGGGCGCGTACTCC",
+            "TGCGGGTGCCAGGGCGTGCCCTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "C",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S3",
+            "S6"
+          ],
+          "product_site_sequences": [
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATCAAGGTAAATG",
+            "CTGATAATTGCCAACACAATTAACATCTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        }
+      ],
+      "completed": true,
+      "terminal_outcome": "inversion",
+      "final_sha256": "b60293c357c39fe4272839b24cfbf8640d2e343110610cc574af583bc1ca5e97"
+    },
+    {
+      "order": "ACB",
+      "events": [
+        {
+          "channel": "A",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S1",
+            "S5"
+          ],
+          "product_site_sequences": [
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "C",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S3",
+            "S6"
+          ],
+          "product_site_sequences": [
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATCAAGGTAAATG",
+            "CTGATAATTGCCAACACAATTAACATCTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "BAC",
+      "events": [
+        {
+          "channel": "B",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S2",
+            "S7"
+          ],
+          "product_site_sequences": [
+            "GTGCCCCAACTGGGGTAACCTTTGGGCTCCCCGGGCGCGTACTCC",
+            "TGCGGGTGCCAGGGCGTGCCCTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "BCA",
+      "events": [
+        {
+          "channel": "B",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S2",
+            "S7"
+          ],
+          "product_site_sequences": [
+            "GTGCCCCAACTGGGGTAACCTTTGGGCTCCCCGGGCGCGTACTCC",
+            "TGCGGGTGCCAGGGCGTGCCCTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "CAB",
+      "events": [
+        {
+          "channel": "C",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S3",
+            "S6"
+          ],
+          "product_site_sequences": [
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATCAAGGTAAATG",
+            "CTGATAATTGCCAACACAATTAACATCTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "A",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S1",
+            "S5"
+          ],
+          "product_site_sequences": [
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "CBA",
+      "events": [
+        {
+          "channel": "C",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S3",
+            "S6"
+          ],
+          "product_site_sequences": [
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATCAAGGTAAATG",
+            "CTGATAATTGCCAACACAATTAACATCTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "B",
+          "chemistry": "integrase",
+          "pair_state": "BP",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S2",
+            "S7"
+          ],
+          "product_site_sequences": [
+            "GTGCCCCAACTGGGGTAACCTTTGGGCTCCCCGGGCGCGTACTCC",
+            "TGCGGGTGCCAGGGCGTGCCCTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    }
+  ],
+  "reverse_orders": [
+    {
+      "order": "ABC",
+      "events": [
+        {
+          "channel": "A",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S5",
+            "S1"
+          ],
+          "product_site_sequences": [
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "ACB",
+      "events": [
+        {
+          "channel": "A",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S5",
+            "S1"
+          ],
+          "product_site_sequences": [
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "BAC",
+      "events": [
+        {
+          "channel": "B",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S7",
+            "S2"
+          ],
+          "product_site_sequences": [
+            "TGCGGGTGCCAGGGCGTGCCCTTGGGCTCCCCGGGCGCGTACTCC",
+            "GTGCCCCAACTGGGGTAACCTTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "BCA",
+      "events": [
+        {
+          "channel": "B",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S7",
+            "S2"
+          ],
+          "product_site_sequences": [
+            "TGCGGGTGCCAGGGCGTGCCCTTGGGCTCCCCGGGCGCGTACTCC",
+            "GTGCCCCAACTGGGGTAACCTTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "CAB",
+      "events": [
+        {
+          "channel": "C",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S6",
+            "S3"
+          ],
+          "product_site_sequences": [
+            "CTGATAATTGCCAACACAATTAACATCTCAATCAAGGTAAATG",
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "A",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "parallel",
+          "outcome": "deletion_excision",
+          "site_ids": [
+            "S5",
+            "S1"
+          ],
+          "product_site_sequences": [
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Parallel cognate sites form a deletion/excision substrate."
+        }
+      ],
+      "completed": false,
+      "terminal_outcome": "deletion_excision",
+      "final_sha256": null
+    },
+    {
+      "order": "CBA",
+      "events": [
+        {
+          "channel": "C",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S6",
+            "S3"
+          ],
+          "product_site_sequences": [
+            "CTGATAATTGCCAACACAATTAACATCTCAATCAAGGTAAATG",
+            "TCCAACTCGCTTAATTGCGAGTTTTTATTTCGTTTATTTCAATTAAGGTAACTAAA"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "B",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S7",
+            "S2"
+          ],
+          "product_site_sequences": [
+            "TGCGGGTGCCAGGGCGTGCCCTTGGGCTCCCCGGGCGCGTACTCC",
+            "GTGCCCCAACTGGGGTAACCTTTGAGTTCTCTCAGTTGGGGG"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        },
+        {
+          "channel": "A",
+          "chemistry": "integrase+rdf",
+          "pair_state": "LR",
+          "relative_orientation": "antiparallel",
+          "outcome": "inversion",
+          "site_ids": [
+            "S5",
+            "S1"
+          ],
+          "product_site_sequences": [
+            "TCGGCCGGCTTGTCGACGACGGCGGTCTCCGTCGTCAGGATCATCCGGGC",
+            "GTCGTGGTTTGTCTGGTCAACCACCGCGGTCTCAGTGGTGTACGGTACAAACCCCGAC"
+          ],
+          "diagnostic": "Antiparallel cognate sites invert the inclusive interval."
+        }
+      ],
+      "completed": true,
+      "terminal_outcome": "inversion",
+      "final_sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583"
+    }
+  ],
+  "exact_round_trip": true,
+  "legacy_fixture": {
+    "path": "../simulation_results.json",
+    "role": "regression oracle only"
+  }
+}

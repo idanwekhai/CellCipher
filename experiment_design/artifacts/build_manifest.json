@@ -1,0 +1,165 @@
+{
+  "exact_round_trip": true,
+  "forward_provenance": [
+    {
+      "accession": "NC_002656.1",
+      "coordinates_0_based": [
+        29490,
+        30993
+      ],
+      "protein_id": "NP_075302.1",
+      "source_sha256": "07a9ee54d9aaeed2ef22876cff64cea7ceb503103f93393c3c2c0a90a8cd20d1",
+      "strand": 1
+    },
+    {
+      "accession": "NC_002656.1",
+      "coordinates_0_based": [
+        35874,
+        36015
+      ],
+      "protein_id": "NP_075313.1",
+      "source_sha256": "07a9ee54d9aaeed2ef22876cff64cea7ceb503103f93393c3c2c0a90a8cd20d1",
+      "strand": -1
+    },
+    {
+      "accession": "NC_001978.3",
+      "coordinates_0_based": [
+        38446,
+        40264
+      ],
+      "protein_id": "NP_047974.1",
+      "source_sha256": "8cf7761157decaa0c1b182347bfd844a9cf269c1b84a622559c7734eae227f0a",
+      "strand": 1
+    },
+    {
+      "accession": "NC_001978.3",
+      "coordinates_0_based": [
+        23097,
+        23832
+      ],
+      "protein_id": "NP_047948.2",
+      "source_sha256": "8cf7761157decaa0c1b182347bfd844a9cf269c1b84a622559c7734eae227f0a",
+      "strand": 1
+    },
+    {
+      "accession": "NC_002747.1",
+      "coordinates_0_based": [
+        29,
+        1487
+      ],
+      "protein_id": "NP_112664.1",
+      "source_sha256": "48476606c8a36b267c0eca1eea64a4f971e20ba77d477a34f8680900caead975",
+      "strand": -1
+    },
+    {
+      "accession": "NC_002747.1",
+      "coordinates_0_based": [
+        4367,
+        4562
+      ],
+      "protein_id": "NP_112670.1",
+      "source_sha256": "48476606c8a36b267c0eca1eea64a4f971e20ba77d477a34f8680900caead975",
+      "strand": 1
+    }
+  ],
+  "hard_constraint_checks": 280,
+  "hard_constraints_passed": true,
+  "primary_records": {
+    "01_message_register.gb": {
+      "features": 16,
+      "length_bp": 966,
+      "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+      "topology": "linear"
+    },
+    "02_forward_controller.gb": {
+      "features": 29,
+      "length_bp": 9584,
+      "sha256": "64ae5f213f1b21168080fc7373bf4c2f8e094dde7499221b93a2908d26034d42",
+      "topology": "circular"
+    },
+    "03_reverse_controller.gb": {
+      "features": 35,
+      "length_bp": 10727,
+      "sha256": "105da7e153ab817182a800fecae05edbc85c2d0edcc7be5acc63821c5ee366b1",
+      "topology": "circular"
+    }
+  },
+  "reverse_provenance": [
+    {
+      "accession": "NC_002656.1",
+      "coordinates_0_based": [
+        29490,
+        30993
+      ],
+      "protein_id": "NP_075302.1",
+      "source_sha256": "07a9ee54d9aaeed2ef22876cff64cea7ceb503103f93393c3c2c0a90a8cd20d1",
+      "strand": 1
+    },
+    {
+      "accession": "NC_002656.1",
+      "coordinates_0_based": [
+        35874,
+        36015
+      ],
+      "protein_id": "NP_075313.1",
+      "source_sha256": "07a9ee54d9aaeed2ef22876cff64cea7ceb503103f93393c3c2c0a90a8cd20d1",
+      "strand": -1
+    },
+    {
+      "accession": "NC_001978.3",
+      "coordinates_0_based": [
+        38446,
+        40264
+      ],
+      "protein_id": "NP_047974.1",
+      "source_sha256": "8cf7761157decaa0c1b182347bfd844a9cf269c1b84a622559c7734eae227f0a",
+      "strand": 1
+    },
+    {
+      "accession": "NC_001978.3",
+      "coordinates_0_based": [
+        23097,
+        23832
+      ],
+      "protein_id": "NP_047948.2",
+      "source_sha256": "8cf7761157decaa0c1b182347bfd844a9cf269c1b84a622559c7734eae227f0a",
+      "strand": 1
+    },
+    {
+      "accession": "NC_002747.1",
+      "coordinates_0_based": [
+        29,
+        1487
+      ],
+      "protein_id": "NP_112664.1",
+      "source_sha256": "48476606c8a36b267c0eca1eea64a4f971e20ba77d477a34f8680900caead975",
+      "strand": -1
+    },
+    {
+      "accession": "NC_002747.1",
+      "coordinates_0_based": [
+        4367,
+        4562
+      ],
+      "protein_id": "NP_112670.1",
+      "source_sha256": "48476606c8a36b267c0eca1eea64a4f971e20ba77d477a34f8680900caead975",
+      "strand": 1
+    }
+  ],
+  "state_records": [
+    "states/state_0.gb",
+    "states/state_0.fasta",
+    "states/state_1.gb",
+    "states/state_1.fasta",
+    "states/state_2.gb",
+    "states/state_2.fasta",
+    "states/state_3.gb",
+    "states/state_3.fasta",
+    "states/reverse_state_2.gb",
+    "states/reverse_state_2.fasta",
+    "states/reverse_state_1.gb",
+    "states/reverse_state_1.fasta",
+    "states/restored_state_0.gb",
+    "states/restored_state_0.fasta"
+  ]
+}

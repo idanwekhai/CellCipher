@@ -1,0 +1,25 @@
+{
+  "esm2": {
+    "changed_selected_channels": false,
+    "checkpoint": "esm2_t48_15B_UR50D",
+    "embedding_dimension": 5120,
+    "integrase_pairwise_similarity_range": [
+      0.7581239916746857,
+      0.893620919681462
+    ],
+    "interpretation": "The analysis prioritizes biochemical diversity and controls; it cannot validate enzyme/site or integrase/RDF orthogonality.",
+    "rdf_pairwise_similarity_range": [
+      0.4611011587735243,
+      0.7048593690973083
+    ]
+  },
+  "viennarna": {
+    "changed_selected_sequences": false,
+    "interpretation": "Placeholder RBS/state-gate sequences are not rescued by favorable folding scores; all remain non-synthesis-ready.",
+    "mfe_per_nt_range": [
+      -0.40931372549019607,
+      -0.19754901586794385
+    ],
+    "windows": 9
+  }
+}

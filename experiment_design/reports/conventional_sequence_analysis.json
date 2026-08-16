@@ -1,0 +1,1108 @@
+[
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 74,
+        "end": 539,
+        "frame": 2,
+        "start": 314,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 457,
+        "frame": 1,
+        "start": 364,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.74,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "A",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_state_0",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 172,
+        "end": 618,
+        "frame": 0,
+        "start": 99,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 2085,
+        "frame": 0,
+        "start": 1980,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 2391,
+        "frame": 0,
+        "start": 2286,
+        "strand": 1
+      },
+      {
+        "amino_acids": 49,
+        "end": 2556,
+        "frame": 0,
+        "start": 2406,
+        "strand": 1
+      },
+      {
+        "amino_acids": 42,
+        "end": 2697,
+        "frame": 0,
+        "start": 2568,
+        "strand": 1
+      },
+      {
+        "amino_acids": 133,
+        "end": 3516,
+        "frame": 0,
+        "start": 3114,
+        "strand": 1
+      },
+      {
+        "amino_acids": 33,
+        "end": 3897,
+        "frame": 0,
+        "start": 3795,
+        "strand": 1
+      },
+      {
+        "amino_acids": 76,
+        "end": 6174,
+        "frame": 0,
+        "start": 5943,
+        "strand": 1
+      },
+      {
+        "amino_acids": 36,
+        "end": 7065,
+        "frame": 0,
+        "start": 6954,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 8244,
+        "frame": 0,
+        "start": 8151,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 9252,
+        "frame": 0,
+        "start": 9156,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 1045,
+        "frame": 1,
+        "start": 952,
+        "strand": 1
+      },
+      {
+        "amino_acids": 36,
+        "end": 1408,
+        "frame": 1,
+        "start": 1297,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 1861,
+        "frame": 1,
+        "start": 1765,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 5764,
+        "frame": 1,
+        "start": 5668,
+        "strand": 1
+      },
+      {
+        "amino_acids": 36,
+        "end": 5887,
+        "frame": 1,
+        "start": 5776,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 1277,
+        "frame": 2,
+        "start": 1172,
+        "strand": 1
+      },
+      {
+        "amino_acids": 271,
+        "end": 2738,
+        "frame": 2,
+        "start": 1922,
+        "strand": 1
+      },
+      {
+        "amino_acids": 81,
+        "end": 3944,
+        "frame": 2,
+        "start": 3698,
+        "strand": 1
+      },
+      {
+        "amino_acids": 500,
+        "end": 5660,
+        "frame": 2,
+        "start": 4157,
+        "strand": 1
+      },
+      {
+        "amino_acids": 521,
+        "end": 7766,
+        "frame": 2,
+        "start": 6200,
+        "strand": 1
+      },
+      {
+        "amino_acids": 521,
+        "end": 9512,
+        "frame": 2,
+        "start": 7946,
+        "strand": 1
+      },
+      {
+        "amino_acids": 82,
+        "end": 3726,
+        "frame": 0,
+        "start": 3477,
+        "strand": -1
+      },
+      {
+        "amino_acids": 62,
+        "end": 4161,
+        "frame": 0,
+        "start": 3972,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 5562,
+        "frame": 0,
+        "start": 5445,
+        "strand": -1
+      },
+      {
+        "amino_acids": 79,
+        "end": 6639,
+        "frame": 0,
+        "start": 6399,
+        "strand": -1
+      },
+      {
+        "amino_acids": 88,
+        "end": 9363,
+        "frame": 0,
+        "start": 9096,
+        "strand": -1
+      },
+      {
+        "amino_acids": 56,
+        "end": 9540,
+        "frame": 0,
+        "start": 9369,
+        "strand": -1
+      },
+      {
+        "amino_acids": 35,
+        "end": 202,
+        "frame": 1,
+        "start": 94,
+        "strand": -1
+      },
+      {
+        "amino_acids": 49,
+        "end": 1258,
+        "frame": 1,
+        "start": 1108,
+        "strand": -1
+      },
+      {
+        "amino_acids": 224,
+        "end": 2485,
+        "frame": 1,
+        "start": 1810,
+        "strand": -1
+      },
+      {
+        "amino_acids": 33,
+        "end": 2623,
+        "frame": 1,
+        "start": 2521,
+        "strand": -1
+      },
+      {
+        "amino_acids": 49,
+        "end": 3526,
+        "frame": 1,
+        "start": 3376,
+        "strand": -1
+      },
+      {
+        "amino_acids": 162,
+        "end": 5365,
+        "frame": 1,
+        "start": 4876,
+        "strand": -1
+      },
+      {
+        "amino_acids": 36,
+        "end": 5518,
+        "frame": 1,
+        "start": 5407,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 6850,
+        "frame": 1,
+        "start": 6733,
+        "strand": -1
+      },
+      {
+        "amino_acids": 35,
+        "end": 7078,
+        "frame": 1,
+        "start": 6970,
+        "strand": -1
+      },
+      {
+        "amino_acids": 43,
+        "end": 7543,
+        "frame": 1,
+        "start": 7411,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 8134,
+        "frame": 1,
+        "start": 8017,
+        "strand": -1
+      },
+      {
+        "amino_acids": 37,
+        "end": 1652,
+        "frame": 2,
+        "start": 1538,
+        "strand": -1
+      },
+      {
+        "amino_acids": 69,
+        "end": 1892,
+        "frame": 2,
+        "start": 1682,
+        "strand": -1
+      },
+      {
+        "amino_acids": 43,
+        "end": 6260,
+        "frame": 2,
+        "start": 6128,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 7052,
+        "frame": 2,
+        "start": 6935,
+        "strand": -1
+      },
+      {
+        "amino_acids": 46,
+        "end": 7241,
+        "frame": 2,
+        "start": 7100,
+        "strand": -1
+      },
+      {
+        "amino_acids": 33,
+        "end": 8030,
+        "frame": 2,
+        "start": 7928,
+        "strand": -1
+      },
+      {
+        "amino_acids": 98,
+        "end": 8468,
+        "frame": 2,
+        "start": 8171,
+        "strand": -1
+      },
+      {
+        "amino_acids": 37,
+        "end": 8606,
+        "frame": 2,
+        "start": 8492,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 4779,
+    "feature_count": 29,
+    "gc_fraction": 0.5164858096828047,
+    "length_bp": 9584,
+    "local_gc_max_50bp": 0.78,
+    "local_gc_min_50bp": 0.14,
+    "longest_homopolymer_base": "A",
+    "longest_homopolymer_length": 7,
+    "max_16mer_count": 1,
+    "noncoding_bp": 4805,
+    "poly_t_or_poly_a_terminator_proxy_count": 6,
+    "record_id": "SRV1_forward_controller",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 4,
+      "BsaI": 2,
+      "BsmBI": 8,
+      "EcoRI": 2,
+      "HindIII": 8
+    },
+    "sha256": "64ae5f213f1b21168080fc7373bf4c2f8e094dde7499221b93a2908d26034d42",
+    "sigma70_proxy_motif_count_both_strands": 3,
+    "topology": "circular"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 172,
+        "end": 618,
+        "frame": 0,
+        "start": 99,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 2085,
+        "frame": 0,
+        "start": 1980,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 2391,
+        "frame": 0,
+        "start": 2286,
+        "strand": 1
+      },
+      {
+        "amino_acids": 49,
+        "end": 2556,
+        "frame": 0,
+        "start": 2406,
+        "strand": 1
+      },
+      {
+        "amino_acids": 42,
+        "end": 2697,
+        "frame": 0,
+        "start": 2568,
+        "strand": 1
+      },
+      {
+        "amino_acids": 133,
+        "end": 3516,
+        "frame": 0,
+        "start": 3114,
+        "strand": 1
+      },
+      {
+        "amino_acids": 33,
+        "end": 3897,
+        "frame": 0,
+        "start": 3795,
+        "strand": 1
+      },
+      {
+        "amino_acids": 173,
+        "end": 6339,
+        "frame": 0,
+        "start": 5817,
+        "strand": 1
+      },
+      {
+        "amino_acids": 36,
+        "end": 7230,
+        "frame": 0,
+        "start": 7119,
+        "strand": 1
+      },
+      {
+        "amino_acids": 57,
+        "end": 8238,
+        "frame": 0,
+        "start": 8064,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 9168,
+        "frame": 0,
+        "start": 9075,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 10176,
+        "frame": 0,
+        "start": 10080,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 1045,
+        "frame": 1,
+        "start": 952,
+        "strand": 1
+      },
+      {
+        "amino_acids": 36,
+        "end": 1408,
+        "frame": 1,
+        "start": 1297,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 1861,
+        "frame": 1,
+        "start": 1765,
+        "strand": 1
+      },
+      {
+        "amino_acids": 34,
+        "end": 1277,
+        "frame": 2,
+        "start": 1172,
+        "strand": 1
+      },
+      {
+        "amino_acids": 271,
+        "end": 2738,
+        "frame": 2,
+        "start": 1922,
+        "strand": 1
+      },
+      {
+        "amino_acids": 91,
+        "end": 3974,
+        "frame": 2,
+        "start": 3698,
+        "strand": 1
+      },
+      {
+        "amino_acids": 538,
+        "end": 5660,
+        "frame": 2,
+        "start": 4043,
+        "strand": 1
+      },
+      {
+        "amino_acids": 606,
+        "end": 7931,
+        "frame": 2,
+        "start": 6110,
+        "strand": 1
+      },
+      {
+        "amino_acids": 244,
+        "end": 8690,
+        "frame": 2,
+        "start": 7955,
+        "strand": 1
+      },
+      {
+        "amino_acids": 33,
+        "end": 8837,
+        "frame": 2,
+        "start": 8735,
+        "strand": 1
+      },
+      {
+        "amino_acids": 485,
+        "end": 10436,
+        "frame": 2,
+        "start": 8978,
+        "strand": 1
+      },
+      {
+        "amino_acids": 64,
+        "end": 10655,
+        "frame": 2,
+        "start": 10460,
+        "strand": 1
+      },
+      {
+        "amino_acids": 59,
+        "end": 4635,
+        "frame": 0,
+        "start": 4455,
+        "strand": -1
+      },
+      {
+        "amino_acids": 34,
+        "end": 4821,
+        "frame": 0,
+        "start": 4716,
+        "strand": -1
+      },
+      {
+        "amino_acids": 62,
+        "end": 5304,
+        "frame": 0,
+        "start": 5115,
+        "strand": -1
+      },
+      {
+        "amino_acids": 79,
+        "end": 7782,
+        "frame": 0,
+        "start": 7542,
+        "strand": -1
+      },
+      {
+        "amino_acids": 88,
+        "end": 10506,
+        "frame": 0,
+        "start": 10239,
+        "strand": -1
+      },
+      {
+        "amino_acids": 56,
+        "end": 10683,
+        "frame": 0,
+        "start": 10512,
+        "strand": -1
+      },
+      {
+        "amino_acids": 35,
+        "end": 421,
+        "frame": 1,
+        "start": 313,
+        "strand": -1
+      },
+      {
+        "amino_acids": 49,
+        "end": 1477,
+        "frame": 1,
+        "start": 1327,
+        "strand": -1
+      },
+      {
+        "amino_acids": 31,
+        "end": 2581,
+        "frame": 1,
+        "start": 2485,
+        "strand": -1
+      },
+      {
+        "amino_acids": 191,
+        "end": 3463,
+        "frame": 1,
+        "start": 2887,
+        "strand": -1
+      },
+      {
+        "amino_acids": 33,
+        "end": 3601,
+        "frame": 1,
+        "start": 3499,
+        "strand": -1
+      },
+      {
+        "amino_acids": 49,
+        "end": 4504,
+        "frame": 1,
+        "start": 4354,
+        "strand": -1
+      },
+      {
+        "amino_acids": 32,
+        "end": 4714,
+        "frame": 1,
+        "start": 4615,
+        "strand": -1
+      },
+      {
+        "amino_acids": 162,
+        "end": 6508,
+        "frame": 1,
+        "start": 6019,
+        "strand": -1
+      },
+      {
+        "amino_acids": 56,
+        "end": 6721,
+        "frame": 1,
+        "start": 6550,
+        "strand": -1
+      },
+      {
+        "amino_acids": 50,
+        "end": 6901,
+        "frame": 1,
+        "start": 6748,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 7993,
+        "frame": 1,
+        "start": 7876,
+        "strand": -1
+      },
+      {
+        "amino_acids": 35,
+        "end": 8221,
+        "frame": 1,
+        "start": 8113,
+        "strand": -1
+      },
+      {
+        "amino_acids": 43,
+        "end": 8686,
+        "frame": 1,
+        "start": 8554,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 9277,
+        "frame": 1,
+        "start": 9160,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 1979,
+        "frame": 2,
+        "start": 1862,
+        "strand": -1
+      },
+      {
+        "amino_acids": 72,
+        "end": 6821,
+        "frame": 2,
+        "start": 6602,
+        "strand": -1
+      },
+      {
+        "amino_acids": 43,
+        "end": 7403,
+        "frame": 2,
+        "start": 7271,
+        "strand": -1
+      },
+      {
+        "amino_acids": 38,
+        "end": 8195,
+        "frame": 2,
+        "start": 8078,
+        "strand": -1
+      },
+      {
+        "amino_acids": 46,
+        "end": 8384,
+        "frame": 2,
+        "start": 8243,
+        "strand": -1
+      },
+      {
+        "amino_acids": 33,
+        "end": 9173,
+        "frame": 2,
+        "start": 9071,
+        "strand": -1
+      },
+      {
+        "amino_acids": 98,
+        "end": 9611,
+        "frame": 2,
+        "start": 9314,
+        "strand": -1
+      },
+      {
+        "amino_acids": 37,
+        "end": 9749,
+        "frame": 2,
+        "start": 9635,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 5850,
+    "feature_count": 35,
+    "gc_fraction": 0.5238184021627669,
+    "length_bp": 10727,
+    "local_gc_max_50bp": 0.78,
+    "local_gc_min_50bp": 0.14,
+    "longest_homopolymer_base": "A",
+    "longest_homopolymer_length": 7,
+    "max_16mer_count": 1,
+    "noncoding_bp": 4877,
+    "poly_t_or_poly_a_terminator_proxy_count": 6,
+    "record_id": "SRV1_reverse_controller",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 4,
+      "BsaI": 3,
+      "BsmBI": 11,
+      "EcoRI": 4,
+      "HindIII": 12
+    },
+    "sha256": "105da7e153ab817182a800fecae05edbc85c2d0edcc7be5acc63821c5ee366b1",
+    "sigma70_proxy_motif_count_both_strands": 4,
+    "topology": "circular"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 74,
+        "end": 539,
+        "frame": 2,
+        "start": 314,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 457,
+        "frame": 1,
+        "start": 364,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.74,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "A",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_state_0",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 30,
+        "end": 211,
+        "frame": 1,
+        "start": 118,
+        "strand": 1
+      },
+      {
+        "amino_acids": 74,
+        "end": 785,
+        "frame": 2,
+        "start": 560,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.74,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "T",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_state_1",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "06c396c7409de7b0e7456cb4a7dbfe9fb1764562dbc52a12e49d45543143b1f6",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 30,
+        "end": 211,
+        "frame": 1,
+        "start": 118,
+        "strand": 1
+      },
+      {
+        "amino_acids": 74,
+        "end": 604,
+        "frame": 1,
+        "start": 379,
+        "strand": -1
+      },
+      {
+        "amino_acids": 74,
+        "end": 785,
+        "frame": 2,
+        "start": 560,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.72,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "T",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_state_2",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "a755d134a61a5319f5c969cc3576812922aa367bfdcb4555c5e7ea475fba614b",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 30,
+        "end": 211,
+        "frame": 1,
+        "start": 118,
+        "strand": 1
+      },
+      {
+        "amino_acids": 71,
+        "end": 635,
+        "frame": 2,
+        "start": 419,
+        "strand": 1
+      },
+      {
+        "amino_acids": 31,
+        "end": 335,
+        "frame": 2,
+        "start": 239,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.72,
+    "local_gc_min_50bp": 0.28,
+    "longest_homopolymer_base": "T",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_state_3",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "b60293c357c39fe4272839b24cfbf8640d2e343110610cc574af583bc1ca5e97",
+    "sigma70_proxy_motif_count_both_strands": 0,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 30,
+        "end": 211,
+        "frame": 1,
+        "start": 118,
+        "strand": 1
+      },
+      {
+        "amino_acids": 74,
+        "end": 604,
+        "frame": 1,
+        "start": 379,
+        "strand": -1
+      },
+      {
+        "amino_acids": 74,
+        "end": 785,
+        "frame": 2,
+        "start": 560,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.72,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "T",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_reverse_state_2",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "a755d134a61a5319f5c969cc3576812922aa367bfdcb4555c5e7ea475fba614b",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 30,
+        "end": 211,
+        "frame": 1,
+        "start": 118,
+        "strand": 1
+      },
+      {
+        "amino_acids": 74,
+        "end": 785,
+        "frame": 2,
+        "start": 560,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.74,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "T",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_reverse_state_1",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "06c396c7409de7b0e7456cb4a7dbfe9fb1764562dbc52a12e49d45543143b1f6",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  },
+  {
+    "ambiguity_symbols": [],
+    "both_strand_orfs_30aa": [
+      {
+        "amino_acids": 74,
+        "end": 539,
+        "frame": 2,
+        "start": 314,
+        "strand": 1
+      },
+      {
+        "amino_acids": 30,
+        "end": 457,
+        "frame": 1,
+        "start": 364,
+        "strand": -1
+      }
+    ],
+    "coding_bp": 0,
+    "feature_count": 16,
+    "gc_fraction": 0.5093167701863354,
+    "length_bp": 966,
+    "local_gc_max_50bp": 0.74,
+    "local_gc_min_50bp": 0.26,
+    "longest_homopolymer_base": "A",
+    "longest_homopolymer_length": 5,
+    "max_16mer_count": 1,
+    "noncoding_bp": 966,
+    "poly_t_or_poly_a_terminator_proxy_count": 0,
+    "record_id": "SRV1_restored_state_0",
+    "repeated_16mers": 0,
+    "restriction_site_counts": {
+      "BamHI": 0,
+      "BsaI": 2,
+      "BsmBI": 0,
+      "EcoRI": 0,
+      "HindIII": 0
+    },
+    "sha256": "41d201bb92dabcae863aa73f976cebc5242dcce37013c3a82827d8d9ebf64583",
+    "sigma70_proxy_motif_count_both_strands": 1,
+    "topology": "linear"
+  }
+]

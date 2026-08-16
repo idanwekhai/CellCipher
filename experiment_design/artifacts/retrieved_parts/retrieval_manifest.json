@@ -1,0 +1,42 @@
+[
+  {
+    "accession": "NC_000964.3",
+    "record_id": "NC_000964.3",
+    "description": "Bacillus subtilis subsp. subtilis str. 168 complete genome",
+    "length": 4215606,
+    "features": 9074,
+    "sha256": "ccff5abf1544569c800d7f100ca518c12f591bd768708198ea8b67171f4f058a"
+  },
+  {
+    "accession": "NC_001978.3",
+    "record_id": "NC_001978.3",
+    "description": "Bacteriophage phi-C31 complete genome",
+    "length": 41491,
+    "features": 110,
+    "sha256": "8cf7761157decaa0c1b182347bfd844a9cf269c1b84a622559c7734eae227f0a"
+  },
+  {
+    "accession": "NC_002656.1",
+    "record_id": "NC_002656.1",
+    "description": "Mycobacterium phage Bxb1, complete genome",
+    "length": 50550,
+    "features": 173,
+    "sha256": "07a9ee54d9aaeed2ef22876cff64cea7ceb503103f93393c3c2c0a90a8cd20d1"
+  },
+  {
+    "accession": "NC_002747.1",
+    "record_id": "NC_002747.1",
+    "description": "Lactococcus phage TP901-1, complete genome",
+    "length": 37667,
+    "features": 113,
+    "sha256": "48476606c8a36b267c0eca1eea64a4f971e20ba77d477a34f8680900caead975"
+  },
+  {
+    "accession": "NC_004664.2",
+    "record_id": "NC_004664.2",
+    "description": "Streptomyces phage phiBT1, complete genome",
+    "length": 41831,
+    "features": 114,
+    "sha256": "0a8be65b6bc91a730e2b0f7ae2c3c0225b1fb0f14719f42bc675d5b42c4e981e"
+  }
+]

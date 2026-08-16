@@ -1,0 +1,33 @@
+hard:
+  - topology_valid
+  - exact_round_trip
+  - required_site_integrity
+  - att_product_reconstruction_valid
+  - site_orientation_valid
+  - central_dinucleotide_valid
+  - no_unintended_active_pair
+  - wrong_order_events_classified
+  - cross_state_sequence_safety
+  - no_unintended_att_site
+  - valid_cds_translation
+  - controller_truth_table_valid
+  - genbank_annotation_integrity
+  - no_forbidden_ambiguity
+soft:
+  global_gc_range: [0.30, 0.70]
+  local_gc_window_bp: 50
+  local_gc_range: [0.20, 0.80]
+  max_homopolymer: 8
+  repeat_k: 16
+  max_repeat_count: 2
+  max_non_payload_orf_aa: 100
+  forbidden_restriction_sites:
+    EcoRI: GAATTC
+    BamHI: GGATCC
+    HindIII: AAGCTT
+    BsaI: GGTCTC
+    BsmBI: CGTCTC
+  promoter_proxy_motifs:
+    sigma70_minus35: TTGACA
+    sigma70_minus10: TATAAT
+  terminator_proxy_min_stem: 6

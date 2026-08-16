@@ -1,0 +1,35 @@
+project_version: "1.0.0-candidate"
+design_date: "2026-08-15"
+scope: computational proof-of-concept
+host:
+  organism: Escherichia coli K-12
+  reference_strain: MG1655
+  reference_accession: NC_000913.3
+  pathogenicity: non-pathogenic laboratory strain
+  landing_locus: unresolved
+  homology_arms_included: false
+message_register:
+  copy_number: 1
+  form: locus-independent linear chromosomal cassette
+  circular_linearization_origin: REGISTER_ORIGIN
+  payloads: neutral synthetic barcodes without biological function
+  payload_length_bp: 96
+controllers:
+  form: circular pACYC177-derived development plasmids
+  recommended_final_form: single-copy chromosomal controller loci
+  state_gate_sequence_status: synthetic placeholder
+  state_gate_claim: boolean prototype only, not experimentally resolved
+  direction_mode: exchange of forward and reverse controller records
+chemistry:
+  conservative_recombination: assumed from cognate LSI chemistry
+  complete_reactions: assumed only in deterministic topology validation
+  orthogonality: unproven until the complete wet-lab crosstalk matrix passes
+  no_host_pseudosites: not assumed; exact-match host scans are only a lower bound
+unavailable_inputs:
+  - /Users/antonia/Downloads/message.txt
+  - /Users/antonia/Downloads/IMG_6124.HEIC
+limitations:
+  - No in-cell switching efficiency, leakage, expression level, or failure probability is inferred.
+  - Regulatory placeholders are excluded from every synthesis-ready claim.
+  - Native phage coding sequences are retained without E. coli codon adaptation.
+  - The final chromosomal landing locus and integration method remain unresolved.

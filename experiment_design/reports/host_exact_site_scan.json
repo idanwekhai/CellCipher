@@ -1,0 +1,50 @@
+{
+  "A_B": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "A_L": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "A_P": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "A_R": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "B_B": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "B_L": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "B_P": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "B_R": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "C_B": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "C_L": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "C_P": {
+    "forward": 0,
+    "reverse_complement": 0
+  },
+  "C_R": {
+    "forward": 0,
+    "reverse_complement": 0
+  }
+}
